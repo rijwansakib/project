@@ -1,0 +1,112 @@
+@import 'src/theme/variables';
+
+
+/*** price-card ****/
+.price-card{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.4) ;
+    padding:35px 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.price{
+    display: block;
+    margin-bottom: 30px;
+}
+.price h2{
+    display: block;
+    color: $heading-color;
+    font-family: $font-en-primary;
+    font-size: 58px;
+    font-weight: 500;
+    margin: 0;
+}
+.price sup{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 27px;
+}
+.package-title{
+    display: block;
+    margin-bottom:25px;
+}
+.package-title h3{
+    font-weight: 500;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-size: 24px;
+    display: block;
+    line-height: 30px;
+    color: $heading-color;
+    margin: 0;
+}
+.package-description{
+    display: block;
+    margin-bottom: 30px;
+}
+.package-description p{
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 18.5px;
+    font-family: $font-en-josh;
+    font-style: normal;
+    display: block;
+    line-height: 26px;
+    margin: 0;
+}
+.get-start-btn{
+    display: block;
+    margin-bottom: 5vh;
+}
+.get-start-btn a{
+    color: #FF6525;
+    background: #FFD9C9;
+    display:block;
+    // max-width: 250px;
+    width: 100%;
+    border-radius: 20px;
+    margin: auto;
+    font-family: $font-en-primary;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 1;
+    padding: 16px 28px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    transform: scale(1.05);
+    transition: all 0.2s linear;
+}
+.get-start-btn a:hover{
+    transform: scale(1);
+}
+.package-service{
+    display: block;
+    width: 100%;
+}
+.package-service ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.package-service ul li{
+    display: block;
+    margin-bottom: 15px;
+    font-family: $font-en-josh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    color: $primary-color;
+}
+.package-service ul li i{
+    color: $secondery-color;
+    display: inline-block;
+    margin-right: 10px;
+}
+.package-service ul li:last-child{
+    margin: 0;
+}

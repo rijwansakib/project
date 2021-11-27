@@ -1,0 +1,33 @@
+<!---card-->
+<div class="card">
+  <!---card-img-start-->
+  <div class="card-img">
+    <img checkImageDefault [src]="data?.image" alt="">
+  </div><!---card-img-end-->
+
+  <!---card-details-->
+  <div class="card-details">
+    <div class="card-tag">
+      <span>Shop</span>
+    </div>
+    <div class="card-title">
+      <a href="javascript:">
+        {{data?.title}}
+      </a>
+    </div>
+    <div class="card-description">
+      <p>{{data?.shortDesc}}</p>
+    </div>
+  </div><!---card-details-end-->
+  <!--card-user-->
+  <div class="card-user">
+    <div class="card-user-img">
+      <img checkImageProfile [src]="data?.author?.profileImage" alt="">
+    </div>
+    <div class="card-user-details">
+      <h3>By:<a href="javascript:">{{data?.author?.name}}</a></h3>
+      <span class="card-activity">Just Now</span>
+    </div>
+  </div><!--card-user-end-->
+
+</div><!---card-end-->

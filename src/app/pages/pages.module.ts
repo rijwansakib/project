@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { PagesRoutingModule } from './pages-routing.module';
-import { PagesComponent } from './pages.component';
+import {PagesRoutingModule} from './pages-routing.module';
+import {PagesComponent} from './pages.component';
+import {MenuModule} from "../core/menu/menu.module";
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { PagesComponent } from './pages.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    MenuModule
   ]
 })
-export class PagesModule { }
+export class PagesModule {
+}

@@ -1,0 +1,47 @@
+<!---********** HEADER-AREA **********-->
+<section class="header-area">
+  <div class="header-area-main">
+
+    <!--profile-info-->
+    <div class="profile-info">
+      <!--profile-img-->
+      <div class="profile-img" [id]="profileData?._id">
+        <img [src]="profileData?.profileImg" alt="">
+        <span class="online"></span>
+      </div>
+      <!--profile-title-->
+      <div class="profile-title">
+        <h2>{{profileData?.profileTitle}}</h2>
+        <h4>{{profileData?.profileSubTitle}}</h4>
+      </div>
+    </div><!--profile-info-end-->
+
+    <!---menu-->
+    <div class="menu-area">
+      <ul>
+        <li *ngFor="let data of menuDataArray" [id]="data?._id"><a [routerLink]="data?.menuRouterLink"><i
+          [class]="data?.menuIconName"></i>{{data?.menuName}}</a></li>
+      </ul>
+    </div><!---menu-end-->
+
+    <!---header-footer-area-->
+    <div class="header-footer-area">
+      <!--social-menu-->
+      <div class="social-menu">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+          <li><a href="#"><i class="fab fa-behance"></i></a></li>
+        </ul>
+      </div>
+      <!---ntt-area-->
+      <div class="ntt">
+        <span>© 2021 Riono, by SoftLab It</span>
+      </div>
+    </div>
+
+
+  </div>
+</section>

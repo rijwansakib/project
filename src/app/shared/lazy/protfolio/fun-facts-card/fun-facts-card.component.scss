@@ -1,0 +1,54 @@
+@import 'src/theme/variables';
+
+/**** card ***/
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffff;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  gap: 10px 20px;
+}
+
+.card-icon {
+  display: block;
+  width: 40px;
+}
+
+.card-icon i {
+  font-size: 40px;
+  font-weight: 600;
+  display: block;
+  color: rgb(88, 72, 180);
+  font-style: normal;
+}
+
+.card-details-text {
+  display: block;
+  width: 100%;
+}
+
+.card-details-text h2 {
+  color: $heading-color;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  display: block;
+  margin: 0;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+.card-details-text p {
+  color: $primary-color;
+  font-family: $font-en-josh;
+  font-style: normal;
+  font-size: 18px;
+  display: block;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 400;
+}

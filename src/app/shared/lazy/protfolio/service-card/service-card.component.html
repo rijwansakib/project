@@ -1,0 +1,17 @@
+ <!---services-card-->
+        <div class="services-card" [id]="cardData?._id">
+            <!---services-card-icon-->
+            <div class="services-card-icon">
+                <i [class]="cardData?.serviceIcon" [style]="service? {
+                    backgroundColor:cardData?.iconBg,
+                    color:cardData?.iconColor} : ''"></i>
+            </div>
+            <!--services-card-heading-->
+            <div class="services-card-heading">
+                <h3>{{cardData?.serviceTitle}}</h3>
+            </div>
+            <!---services-card-description-->
+            <div class="services-card-description">
+                <p>{{cardData?.serviceDescription}}</p>
+            </div>
+        </div> <!---services-card-->

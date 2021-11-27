@@ -1,0 +1,142 @@
+@import "src/theme/variables";
+
+
+
+a {
+  color: #000;;
+}
+
+span, i {
+  color: #858585;
+}
+
+
+/**** card-code ***/
+.card{
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.card-img{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.card-img img{
+  width: 100%;
+  display: block;
+  border-radius: 7px;
+  transition: all 0.3s linear;
+  min-height: 280px;
+  object-fit: cover;
+}
+.card:hover .card-img img{
+  transform: scale(1.07);
+}
+.card-details{
+  display: block;
+}
+.card-tag{
+  display: block;
+  margin-bottom: 8px;
+}
+.card-tag span{
+  background-color: #ede6fc;
+  color: #5e4695;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+.card-title{
+  display: block;
+  margin-bottom: 6px;
+}
+.card-title a{
+  color: #2d2d35;
+  width: 100%;
+  font-weight: 600;
+  font-family: $font-en-primary;
+  font-style: normal;
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  transition: all 0.3s linear;
+}
+.tips{
+  background: #defff7!important;
+  color: #7fb4be!important;
+}
+.Fixing{
+  background: #e6e6ff!important;
+  color: #6b59c5!important;
+}
+
+.card-title a:hover{
+  color: #0266c9;
+}
+.card-description{
+  display: block;
+}
+.card-description p{
+  color: #a5a5a8;
+  font-weight: 400;
+  font-style: normal;
+  font-family: $font-en-primary;
+  font-size: 15px;
+  display: block;
+  line-height: 24px;
+  text-transform: lowercase;
+}
+.card-user{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.card-user-img{
+  display: block;
+  margin-right: 10px;
+  width: 60px;
+}
+.card-user-img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 5px 0 #eee;
+  object-fit: cover;
+}
+.card-user-details{
+  display:block;
+  width: 100%;
+}
+.card-user-details h3{
+  display: block;
+  font-family: $font-en-roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #2d2d35;
+}
+.card-user-details h3 a{
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+.card-user-details h3 a:hover{
+  color: #0266c9;
+}
+.card-activity{
+  font-weight: 400;
+  font-size: 15px;
+  font-family: $font-en-primary;
+  display: block;
+}/**** card-end ****/
+
+

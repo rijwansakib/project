@@ -1,0 +1,29 @@
+  <!--price-card-->
+  <div class="price-card" [id]="priceData?._id" [style.backgroundColor]="bg ? priceData?.priceCardBg : '#fff' ">
+    <!--price-->
+    <div class="price">
+        <h2><sup>$</sup>{{priceData?.price}}</h2>
+    </div>
+    <!--package-title-->
+    <div class="package-title">
+        <h3>{{priceData?.packageName}}</h3>
+    </div>
+    <!--package-description-->
+    <div class="package-description">
+        <p>{{priceData?.packageDescription}}</p>
+    </div>
+    <!--get-start-btn-->
+    <div class="get-start-btn">
+        <a href="#">Get Started</a>
+    </div>
+    <!---package-service-->
+    <div class="package-service">
+        <ul>
+            <li><i class="fa fa-check-circle"></i>{{priceData?.packageUpdateYear}}</li>
+            <li><i class="fa fa-check-circle"></i>{{priceData?.supportType}}</li>
+            <li><i class="fa fa-check-circle"></i>{{priceData?.packageLabeling}}</li>
+        </ul>
+    </div>
+
+</div><!--price-card-end-->
+

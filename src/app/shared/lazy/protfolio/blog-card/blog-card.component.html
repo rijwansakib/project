@@ -1,0 +1,25 @@
+<!--blog-card-->
+    <div class="blog-card" [id]="blogData?._id">
+        <!---blog-img-->
+        <div class="blog-img">
+          <a [routerLink]="[blogData?.blogRouterLink]" ><img [src]="blogData?.blogImg" [alt]="blogData?.blogImg"></a>
+            <!---blog-categori-badge-->
+            <div class="blog-badge">
+                <span>{{blogData?.blogCategoriBadge}}</span>
+            </div>
+        </div>
+        <!---blog-card-body-->
+        <div class="blog-card-body">
+            <!--list-->
+            <div class="">
+                <ul>
+                    <li><i class="fa fa-calendar-alt"></i>{{blogData?.blogWrittingDate}}</li>
+                    <li><i class="fa fa-user"></i>{{blogData?.blogWritterName}}</li>
+                </ul>
+            </div>
+            <!---blog-link-->
+            <div class="blog-link">
+                <a [routerLink]="[blogData?.blogRouterLink]" >{{blogData?.blogTitle}}</a>
+            </div>
+        </div>
+    </div><!--blog-card-end-->

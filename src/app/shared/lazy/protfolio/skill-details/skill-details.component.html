@@ -1,0 +1,22 @@
+      <!--skill-details-->
+      <div class="skill-details" [id]="skillData?._id">
+        <!--skill-details-top-->
+        <div class="skill-details-top">
+            <!---skill-name-->
+            <div class="skill-name">
+                <span>{{skillData?.skillTopicName}}</span>
+            </div>
+            <!---skill-parcent-->
+            <div class="skill-parcent">
+                <span>{{skillData?.skillParcent}}</span>
+            </div>
+        </div><!--skill-details-top-en-->
+        <!--skill-bar-->
+        <div class="skill-bar">
+            <span class="skill-bar1"></span>
+            <span class="skill-bar2" [style]="skill ? {
+                backgroundColor:skillData?.skillEffectBg,
+                width:skillData?.skillParcent} : ''"></span>
+
+        </div><!--skill-bar-end-->
+    </div><!--skill-details-end-->

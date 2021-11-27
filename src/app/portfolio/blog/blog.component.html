@@ -1,0 +1,99 @@
+<!---main-container-->
+<section class="main-container">
+
+  <!---blog-section1-->
+  <section class="blog-section-1">
+    <!---section-1-top-->
+    <div class="section1-top">
+      <!--quesion-->
+      <div class="question">
+        <!--icon-->
+        <div class="question-icon">
+          <i class="fa fa-pencil-alt"></i>
+        </div>
+        <!--quesion-text-->
+        <div class="question-text">
+          <span>Latest Posts</span>
+        </div>
+      </div><!--quesion-end-->
+      <!---section-header--->
+      <div class="section-header">
+        <h2>Blog Posts</h2>
+      </div><!---section-header--->
+
+    </div><!---section-1-top-end-->
+
+    <!---blog-section1-main-->
+    <div class="blog-section1-main">
+      <!--blog-left-->
+      <div class="blog-left">
+        <!---blog-post-->
+        <div class="blog-post">
+          <!--blog-card-->
+          <div class="blog-card" *ngFor="let blogData of blogDataArray">
+            <app-blog-card [blogData]="blogData"></app-blog-card>
+          </div><!--blog-card-end-->
+        </div><!---blog-post-end-->
+        <!--blog-pagination-->
+        <div class="blog-pagination">
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </div>
+      </div> <!--blog-left-->
+      <!---blog-right-->
+      <div class="blog-right">
+        <!---blog-other-info-area-->
+        <div class="blog-other-info-area">
+          <!---blog-search-->
+          <div class="blog-search">
+            <form action="">
+              <input type="text" value="" name="searchBox" placeholder="Search...">
+            </form>
+          </div>
+          <!--blog-categorie-->
+          <div class="blog-categorie">
+            <!---blog-categorie-heading-->
+            <div class="blog-sub-heading">
+              <h4>Categories</h4>
+            </div>
+            <ul>
+              <li *ngFor="let data of categorieArray"><i class="fa fa-angle-right"></i> <a
+                [routerLink]="[data?.categorieRouterLink]">{{data?.categorieName}}</a></li>
+            </ul>
+          </div>
+          <!--blog-tags-->
+          <div class="blog-tag">
+            <!---blog-tag-heading-->
+            <div class="blog-sub-heading">
+              <h4>Tags</h4>
+            </div>
+            <ul>
+              <li *ngFor="let data of tagArray"><a [routerLink]="[data?.tagRouterLink]">{{data?.tagName}}</a></li>
+            </ul>
+          </div>
+          <!--blog-meta-->
+          <div class="blog-meta">
+            <!---blog-meta-heading-->
+            <div class="blog-sub-heading">
+              <h4>Meta</h4>
+            </div>
+            <ul>
+              <li *ngFor="let data of metaArray"><i class="fa fa-angle-right"></i> <a
+                [routerLink]="[data?.metaRouterLink]">{{data?.metaName}}</a></li>
+            </ul>
+          </div>
+
+        </div><!---blog-other-info-area-->
+      </div>
+
+
+    </div> <!---blog-section1-main-->
+
+
+  </section> <!---blog-section1-end-->
+
+
+</section>

@@ -1,0 +1,59 @@
+@import 'src/theme/variables';
+
+/*** resume-card ****/
+.resume-card{
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+}
+.resume-card-date{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.resume-card-date span{
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 13px;
+    border: 1px solid rgb(255, 101, 37);
+    border-radius: 5px;
+    color: rgb(255, 101, 37);
+    font-family:$font-en-primary;
+    font-style: normal;
+    font-weight: 400;
+}
+.resume-name{
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.resume-name h3{
+    color: $heading-color;
+    font-family: $font-en-primary;
+    font-style:normal;
+    font-weight: 500;
+    font-size: 19px;
+    display: block;
+    line-height: 28px;
+    margin: 0;
+}
+.resume-description{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.resume-description p{
+    color: $primary-color;
+    font-family: $font-en-josh;
+    font-style: normal;
+    font-size: 17.5px;
+    display: block;
+    line-height: 27px;
+    margin: 0;
+}

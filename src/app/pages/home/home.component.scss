@@ -1,0 +1,55 @@
+@import "src/theme/ui/banner-showcase";
+
+.section-1 {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+}
+
+/*** section-2 ***/
+.section-2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 15vh;
+}
+
+.section2-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px 30px;
+  padding-bottom: 10vh;
+  border-bottom: 2px solid #eee;
+}
+
+.section-3 {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
+}
+
+/*** section2-res ***/
+@media(max-width: 950px) {
+  .section-2 {
+    margin-top: 10vh;
+  }
+  .section2-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .section2-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-2 {
+    margin-top: 6vh;
+  }
+}

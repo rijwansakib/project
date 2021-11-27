@@ -32,6 +32,7 @@ span, i {
 a {
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .clearfix::after {
@@ -39,6 +40,7 @@ a {
   display: block;
   clear: both;
 }
+
 
 
 /* =HIDE NUMBER ARROW
@@ -210,3 +212,40 @@ hr{
 
 }
 
+/* =Back to top
+----------------------------------------------------------------------------- */
+.back-to-top{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 999999;
+  right: 20px;
+  bottom: 20px;
+  opacity: .8;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: $color-primary;
+  border-radius: 4px;
+  &:hover{
+    background-color: $table-sm-color;
+    border-color: $table-sm-color;
+  }
+}
+
+/* =Transition
+----------------------------------------------------------------------------- */
+.transition{
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* =UTILS
+----------------------------------------------------------------------------- */
+.no-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

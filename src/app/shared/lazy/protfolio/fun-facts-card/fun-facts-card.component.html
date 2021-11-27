@@ -1,0 +1,12 @@
+ <!--card-->
+ <div class="card" [id]="funFactCardData?._id">
+    <!--card-icon-->
+    <div class="card-icon">
+        <i [class]="funFactCardData?.cardIcon" [style.color]="funFactCardData?.cardIconColor"></i>
+    </div>
+    <!---card-details-text-->
+    <div class="card-details-text">
+        <h2>{{funFactCardData?.totalProject}}</h2>
+        <p>{{funFactCardData?.description}}</p>
+    </div>
+</div>

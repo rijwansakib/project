@@ -1,0 +1,71 @@
+@import 'src/theme/variables';
+
+
+/*** work-card ****/
+.work-card{
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.work-img{
+    display: block;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.work-img img{
+    display: block;
+    transform: scale(1);
+    width: 100%;
+    transition: all 0.3s linear;
+}
+.work-card:hover img{
+    transform: scale(1.04) rotate(4deg);
+}
+.work-bage{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.work-bage span{
+    display: block;
+    background-color: rgba(255, 101, 37, 0.8);
+    color: $white-color;
+    font-family: $font-en-josh;
+    font-weight: 400;
+    padding: 4px 15px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 5px;
+}
+.work-details{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.work-details h2{
+    color: $heading-color;
+    font-weight: 500;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-size: 17px;
+    display: block;
+    line-height: 28px;
+    margin: 0;
+}
+.work-details h4{
+    color: $primary-color;
+    font-family: $font-en-josh;
+    font-style: normal;
+    font-size: 16px;
+    display: block;
+    line-height: 24px;
+    margin: 0;
+    font-weight: 400;
+}

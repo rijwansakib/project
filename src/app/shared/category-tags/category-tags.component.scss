@@ -1,0 +1,103 @@
+@import "src/theme/variables";
+
+
+.section3-title{
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section3-title h2{
+  color: #2d2d35;
+  font-weight: 600;
+  font-style: normal;
+  font-family: $font-en-roboto;
+  font-size: 20px;
+  display: block;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+}
+.section3-title h2 span{
+  color: #a5a5a8;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.section3-tag-menu{
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+}
+.section3-tag-menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.section3-tag-menu ul li{
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 10px;
+}
+.section3-tag-menu ul li:last-child{
+  margin: 0;
+}
+.section3-tag-menu ul li a{
+  background-color: #feeff7;
+  color: #d398ad;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 600;
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.section3-tag-menu ul li a span{
+  color: #d398ad;
+  font-size:12px;
+  display: inline-block;
+}
+.section3-tag-menu ul li:nth-child(2) a{
+  background-color: #defff7;
+  color: #73dbc8;
+}
+.section3-tag-menu ul li:nth-child(2) a span{
+  color: #73dbc8;
+}
+.section3-tag-menu ul li:nth-child(3) a{
+  background-color: #ede6fc;
+  color: #69549b;
+}
+.section3-tag-menu ul li:nth-child(3) a span{
+  color: #755dad;
+}
+.section3-tag-menu ul li:nth-child(4) a{
+  background-color: #e5e7e9;
+  color: #7e8081;
+}
+.section3-tag-menu ul li:nth-child(4) a span{
+  color: #7e8081;
+}
+.section3-tag-menu ul li:nth-child(5) a{
+  background-color: #fdf4d9;
+  color: #bc9b65;
+}
+.section3-tag-menu ul li:nth-child(5) a span{
+  color: #bc9b65;
+}
+
+.section3-tag-menu ul li:nth-child(6) a{
+  background-color: #d8ecfc;
+  color: #809cd2;
+}
+.section3-tag-menu ul li:nth-child(6) a span{
+  color: #809cd2;
+}
+.section3-tag-menu ul li:nth-child(7) a{
+  background-color: #e5ffb4;
+  color: #9ab86c;
+}
+.section3-tag-menu ul li:nth-child(7) a span{
+  color: #9ab86c;
+}

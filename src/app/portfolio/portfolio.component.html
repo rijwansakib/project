@@ -1,0 +1,29 @@
+<!---pages-render-area-->
+<main id="portfolio">
+  <div class="pages-render-area">
+    <!--mbl-bar-->
+    <div class="mbl-bar" (click)="slideMenuOpen()">
+      <div class="bar">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+      </div>
+    </div>
+    <div class="pages-main">
+      <!---header-area-->
+      <div class="header-area" [class]="slideMenu?'acive-menu-slide':''">
+        <!---cross-bar-->
+        <div class="cross-bar" (click)="slideMenuClose()">
+          <span class="line1"></span>
+          <span class="line2"></span>
+        </div>
+        <app-header (click)="slideMenuClose()"></app-header>
+      </div>
+      <!--all-page-area-->
+      <div class="all-pages">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,17 @@
+<!---member-details--->
+    <div class="member-details" [id]="testimonialMemberData?._id">
+         <!---memeber-img-->
+            <div class="member-img">
+                <img [src]="testimonialMemberData?.memberImg" [alt]="testimonialMemberData?.memberName">
+            </div>
+             <!---member-title-->
+            <div class="member-title">
+                 <h3>{{testimonialMemberData?.memberName}}</h3>
+                 <h4>{{testimonialMemberData?.memberPosition}}</h4>
+             </div>
+            <!---member-description-->
+         <div class="member-description">
+            <p >{{testimonialMemberData?.memberDescription}}</p>
+        </div>
+</div><!---member-details-end--->
+

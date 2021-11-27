@@ -1,0 +1,69 @@
+@import 'src/theme/variables';
+
+/*** services-card ***/
+.services-card {
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+
+}
+
+.services-card:hover {
+  transform: scale(1.03);
+}
+
+.services-card-icon {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.services-card-icon i {
+  width: 50px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 225, 255);
+  color: rgb(88, 72, 180);
+  border-radius: 10px;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.services-card-heading {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.services-card-heading h3 {
+  color: $heading-color;
+  display: block;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  margin: 0;
+  line-height: 25px;
+}
+
+.services-card-description {
+  display: block;
+  width: 100%;
+}
+
+.services-card-description p {
+  color: $primary-color;
+  font-family: $font-en-josh;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  line-height: 28px;
+  margin: 0;
+}

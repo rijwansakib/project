@@ -1,0 +1,52 @@
+<!---banner-area---->
+<section class="banner-area">
+  <div class="container">
+
+    <!---banner-details-->
+    <div class="banner-details">
+      <div class="banner-heading">
+        <h1>Dirodi Etertaining</h1>
+      </div>
+      <!---banner-page-title-->
+      <div class="banner-page-title">
+        <h2><sup>“</sup> Blog <sup style="transform: rotateY(-180deg);">“</sup></h2>
+      </div>
+      <div class="banner-description">
+        <p>dirodi entertaining blog dirodi etertaining dirodi blog</p>
+      </div>
+
+      <!---search-area-->
+      <div class="search-area">
+        <form action="">
+          <input type="text" name="userSearch" placeholder="Search">
+          <button>Go</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!---banner-end-->
+
+
+<!---section1-->
+<section class="section-1">
+  <app-feature-blog-card></app-feature-blog-card>
+</section><!---section1-end-->
+
+
+<!---section-2-->
+<section class="section-2">
+  <!--section-2-main-->
+  <div class="section2-main">
+    <app-blog-card *ngFor="let data of blogs" [data]="data"></app-blog-card>
+  </div>
+</section><!---********** section2-end ***********-->
+
+
+<!------section-3----->
+<section class="section-3">
+  <app-category-tags></app-category-tags>
+</section> <!---********** section3-end ***********-->
+
+
+
+

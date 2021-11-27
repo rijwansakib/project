@@ -1,0 +1,15 @@
+    <!--work-card-->
+    <div class="work-card" [id]="workData?._id">
+        <!---work-img-->
+        <div class="work-img">
+            <img [src]="workData?.workImg" [alt]="workData?.workTitle">
+            <div class="work-bage">
+                <span>{{workData?.workBadge}}</span>
+            </div>
+        </div>
+        <!---works-details--->
+        <div class="work-details">
+            <h2>{{workData?.workTitle}}</h2>
+            <h4>{{workData?.workCategori}}</h4>
+        </div>
+    </div><!--work-card-end-->

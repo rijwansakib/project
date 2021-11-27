@@ -1,0 +1,106 @@
+<!---main-container-->
+<section class="main-container">
+
+    <!---contact-section-1-->
+    <section class="contact-section-1">
+        <!--quesion-->
+        <div class="question">
+            <!--icon-->
+            <div class="question-icon">
+                <i class="fa fa-comment-alt"></i>
+            </div>
+            <!--quesion-text-->
+            <div class="question-text">
+                <span>Get In touch</span>
+            </div>
+        </div><!--quesion-end-->
+        <!---section-header--->
+        <div class="section-header">
+            <h2>Contact</h2>
+        </div><!---section-header--->
+
+        <!---contact-section1-main-->
+        <div class="contact-section1-main">
+            <!---contact-card-->
+            <div class="contact-card" *ngFor="let data of contactArray" [id]="data?._id">
+                <!--contact-icon-->
+                <div class="contact-card-icon" [style]="contactColor?{
+                    backgroundColor:data?.contactPrimaryBg
+                }:''"
+                >
+                <i [class]="data?.contactIcon" [style]="contactColor?{
+                        color:data?.contactPrimaryColor
+                    }:''" ></i>
+                </div>
+                <!---contact-card-details-->
+                <div class="contact-card-details">
+                    <h4>{{data?.contactTitle}}</h4>
+                    <span>{{data?.contactInfo}}</span>
+                </div>
+                
+            </div><!---contact-card-end-->
+
+        </div> <!---contact-section1-main-end-->
+
+    </section><!---contact-section-1-end-->
+
+
+    <!---contact-section-2-->
+    <section class="contact-section-2">
+
+         <!---section-header--->
+         <div class="section-header" style="margin-bottom: 4vh;">
+            <h2 style="font-size: 23px; font-weight: 500;">Send Message</h2>
+        </div><!---section-header--->
+
+        <!---contact-form-area-->
+        <div class="contact-form-area">
+            <!--form-->
+            <form [formGroup]="formData" (ngSubmit)="ngSubmit()">
+                <!--name-area-->
+                <div class="top-area">
+                    <div class="name">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Your Name</mat-label>
+                            <input matInput placeholder="Your name" type="text" value="" formControlName="name" required>
+                            <mat-error>This Field Is Required</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="email">
+                        <mat-form-field appearance="outline">
+                            <mat-label>E-mail Address</mat-label>
+                            <input matInput placeholder="E-mail Address" type="email" value="" formControlName="email" required>
+                            <mat-error>This Field Is Required</mat-error>
+                          </mat-form-field>
+                    </div>
+                </div>
+                <!--subject--->
+                <div class="subject">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Subject</mat-label>
+                        <input matInput placeholder="Subject" value="" type="text" formControlName="subject" required>
+                        <mat-error>This Field Is Required</mat-error>
+                      </mat-form-field>
+                </div>
+                <!---comment-->
+                <div class="comment">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Your Message Here...</mat-label>
+                        <textarea matInput cols="6" rows="8" placeholder="Your Message Here..." formControlName="message" required></textarea>
+                        <mat-error>This Field Is Required</mat-error>
+                      </mat-form-field>
+                </div>
+
+                <!--sub-btn-->
+                <div class="submit-btn">
+                    <button mat-button type="submit">Submit Message</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section> <!---contact-section-2-end-->
+
+
+</section>

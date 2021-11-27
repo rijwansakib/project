@@ -1,0 +1,43 @@
+@import "src/theme/variables";
+
+
+mat-sidenav{
+  position: fixed;
+  width: $mat-sidenav-width;
+}
+
+
+mat-sidenav-content {
+  background-color: #FFFF;
+}
+
+mat-sidenav-container {
+  background: #FFFFFF;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/**
+MAIN CONTENT
+ */
+.main-content {
+  width: 100%;
+  max-width: $theme-container-max-width;
+  margin: 0 auto;
+}
+
+
+/**
+RESPONSIVE
+ */
+@media only screen and (min-width: 599px) and (max-width: $theme-container-width) {
+  .main-content {
+    padding: 0;
+  }
+
+}
+
+
+@media only screen and (max-device-width: 599px) {
+
+}

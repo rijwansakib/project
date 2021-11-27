@@ -1,0 +1,78 @@
+@import 'src/theme/variables';
+
+/**** blog-card ***/
+.blog-card{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffff;
+    border-radius: 7px;
+    height: 100%;
+}
+.blog-img{
+    display: block;
+    position: relative;
+    z-index: 20;
+}
+.blog-img img{
+    border-radius: 7px;
+    width: 100%;
+}
+.blog-badge{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.blog-badge span{
+    display: inline-block;
+    background-color: rgba(255, 101, 37, 0.8);
+    color: #fff;
+    font-family: $font-en-josh;
+    font-weight: 400;
+    padding: 4px 15px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 5px
+}
+.blog-card-body{
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.blog-card-body ul{
+  padding: 0;
+  margin: 0 0 12px 0;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+}
+.blog-card-body ul li{
+    display: block;
+    color: $primary-color;
+    font-style: normal;
+    font-family: $font-en-josh;
+    font-size: 17px;
+}
+.blog-card-body ul li:last-child{
+    margin: 0;
+}
+.blog-card-body ul li i{
+    display: inline-block;
+    font-size: 15px;
+    color: $primary-color;
+    font-style: normal;
+    margin-right: 8px;
+}
+.blog-card-body a{
+    color: $heading-color;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    display: block;
+    line-height: 26px;
+}

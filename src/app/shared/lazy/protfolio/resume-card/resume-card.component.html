@@ -1,0 +1,19 @@
+      <!-- resume-card-->
+      <div class="resume-card" [id]="resumeCardData?._id">
+        <!---resume-card-date-->
+        <div class="resume-card-date">
+            <span [style]="resumeColor?{
+                color:resumeCardData?.resumeDateColor,
+                borderColor:resumeCardData?.resumeDateColor
+            }:''">{{resumeCardData?.startDate}} - {{resumeCardData?.endDate}}</span>
+
+        </div>
+        <!---resume-name-->
+        <div class="resume-name">
+            <h3>{{resumeCardData?.resumeTitle}}</h3>
+        </div>
+        <!---resume-description-->
+        <div class="resume-description">
+            <p>{{resumeCardData?.resumeDescription}}</p>
+        </div>
+    </div><!--resume-card-end -->
