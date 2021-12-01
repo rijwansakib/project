@@ -21,6 +21,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
+import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
 
 
 const materials = [
@@ -45,7 +46,8 @@ const materials = [
   MatRippleModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  OverlayModule
+  OverlayModule,
+  MatBottomSheetModule
 ];
 
 

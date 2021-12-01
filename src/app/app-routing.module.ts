@@ -11,8 +11,16 @@ const routes: Routes = [
     loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
   },
   {
+    path: 'developer-panel',
+    loadChildren: () => import('./developer/pages/pages.module').then(m => m.PagesModule)
+  },
+  {
     path: 'signup',
     loadChildren: () => import('./auth/sign-up/sign-up.module').then(m => m.SignUpModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./auth/sign-in/sign-in.module').then(m => m.SignInModule)
   },
 ];
 
