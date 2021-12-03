@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
       },
       {
+        path: 'blogs',
+        loadChildren: () => import('./blogs/blogs.module').then(m => m.BlogsModule),
+      },
+      {
         path: 'image-gallery',
         loadChildren: () => import('./image-gallery/image-gallery.module').then(m => m.ImageGalleryModule),
       },

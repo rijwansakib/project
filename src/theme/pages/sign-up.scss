@@ -282,13 +282,30 @@
   display: block;
 }
 
-.sub-mit button {
+.sub-mit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.sub-mit .n-signup {
   font-family: $font-en-primary;
   font-size: 16px;
   display: block;
   max-width: 250px;
   width: 100%;
   padding: 5px 0px;
+}
+
+.sub-mit .d-signup{
+  font-family: $font-en-primary;
+  font-size: 16px;
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  padding: 5px 0px;
+  border-color: $color-primary;
 }
 
 @media(max-width: 1020px) {

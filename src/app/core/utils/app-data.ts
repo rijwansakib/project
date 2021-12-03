@@ -1,6 +1,7 @@
 
 import {Select} from '../../interfaces/select';
 import {AdminRoleEnum} from '../../enum/admin-role.enum';
+import {UserTypeEnum} from "../../enum/user-type.enum";
 
 export const ADMIN_ROLES: Select[] = [
   {value: AdminRoleEnum.SUPER_ADMIN, viewValue: 'Super Admin'},
@@ -30,5 +31,10 @@ export const REPORT_FILTER: Select[] = [
   {value: 'last-30-days', viewValue: 'Last 30 days'},
   {value: 'last-60-days', viewValue: 'Last 60 days'},
   {value: 'last-90-days', viewValue: 'Last 90 days'}
+];
+
+export const USER_TYPES: Select[] = [
+  {value: UserTypeEnum.DEVELOPER, viewValue: 'Developer'},
+  {value: UserTypeEnum.USER, viewValue: 'User'}
 ];
 

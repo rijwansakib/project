@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogCardComponent } from './blog-card.component';
 import {DirectivesModule} from "../../directives/directives.module";
+import {PipesModule} from "../../pipes/pipes.module";
 
 
 
@@ -12,9 +13,10 @@ import {DirectivesModule} from "../../directives/directives.module";
   exports: [
     BlogCardComponent
   ],
-  imports: [
-    CommonModule,
-    DirectivesModule
-  ]
+    imports: [
+        CommonModule,
+        DirectivesModule,
+        PipesModule
+    ]
 })
 export class BlogCardModule { }

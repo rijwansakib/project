@@ -52,7 +52,7 @@
       </div>
       <!---form-area-->
       <div class="form-area">
-        <form [formGroup]="dataForm" (ngSubmit)="ngSubmit()">
+        <form [formGroup]="dataForm" (ngSubmit)="onSubmitForm()">
           <!---name-->
           <!-- <div class="name">
               <div class="f-name">
@@ -74,7 +74,7 @@
           <div class="email">
             <mat-form-field appearance="outline">
               <mat-label>Username or Email</mat-label>
-              <input matInput type="text" placeholder='' value="" formControlName="userName"
+              <input matInput type="text" placeholder='' value="" formControlName="username"
                      required>
               <mat-error>This Field Is Required</mat-error>
             </mat-form-field>
@@ -100,11 +100,11 @@
               </div>
           </div>-->
           <div class="forget-pass">
-            <a href="#">Forgot password?</a>
+            <a href="javascript:">Forgot password?</a>
           </div>
 
           <div class="sub-mit">
-            <button type="button" mat-raised-button color="accent" routerLink="/">Sign In</button>
+            <button type="submit" mat-raised-button color="accent">Sign In</button>
           </div>
 
         </form>
@@ -115,4 +115,14 @@
   </div>
 
 </section>
+
+<!-- NGX SPINNER -->
+<ngx-spinner style="width: 100vw; height: 100vh"
+             bdColor = "rgba(0,0,0,0.25)"
+             size = "medium"
+             color = "#fff"
+             type = "ball-clip-rotate"
+             [fullScreen] = "true">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
 

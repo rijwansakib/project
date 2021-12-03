@@ -58,7 +58,7 @@
             <div class="f-name">
               <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput placeholder="Enter your full name" type="text" formControlName="name"
+                <input matInput placeholder="Enter your full name" type="text" formControlName="fullName"
                        required>
                 <mat-error>This Field Is Required</mat-error>
               </mat-form-field>
@@ -66,7 +66,7 @@
             <div class="u-name">
               <mat-form-field appearance="outline">
                 <mat-label>Username</mat-label>
-                <input matInput placeholder="Username must be unique" type="text" formControlName="userName"
+                <input matInput placeholder="Username must be unique" type="text" formControlName="username"
                        required>
                 <mat-error>This Field Is Required</mat-error>
               </mat-form-field>
@@ -81,16 +81,36 @@
               <mat-error>Enter a valid email address</mat-error>
             </mat-form-field>
           </div>
-          <div class="community">
-            <mat-form-field appearance="outline">
-              <mat-label>Select Community Platform</mat-label>
-              <mat-select formControlName="community">
-                <mat-option *ngFor="let data of communities" [value]="data.value">
-                  {{data.viewValue}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+          <div class="name">
+            <div class="f-name">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Area</mat-label>
+                <mat-select formControlName="category" (selectionChange)="onSelectCategory($event)">
+                  <mat-option *ngFor="let data of categories" [value]="data._id" >
+                    {{data.categoryName}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="u-name">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Community Platforms</mat-label>
+                <mat-select [disableOptionCentering]="true" #select2 placeholder="Select Community Platforms" required multiple
+                            formControlName="subCategory">
+                  <mat-select-filter [placeholder]="'Filter Sub Category List'"
+                                     *ngIf="select2.focused"
+                                     [array]="subCategories"
+                                     [displayMember]="'subCategoryName'"
+                                     (filteredReturn)="filteredSubCatList = $event"></mat-select-filter>
+                  <mat-option *ngFor="let cat of filteredSubCatList" [value]="cat._id">
+                    {{cat.subCategoryName}}
+                  </mat-option>
+                </mat-select>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
           </div>
+
           <!---pass-->
           <div class="name">
             <div class="f-name">
@@ -123,7 +143,9 @@
             </div>
           </div>
           <div class="sub-mit">
-            <button type="submit" mat-raised-button color="accent">Create Account</button>
+            <button class="n-signup" type="submit" mat-raised-button color="accent">Create Account</button>
+            <p>OR</p>
+            <button class="d-signup" type="button" mat-stroked-button color="primary" [routerLink]="['developer']">Join as Developer</button>
           </div>
 
         </form>

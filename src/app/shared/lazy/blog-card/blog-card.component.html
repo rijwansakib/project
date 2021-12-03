@@ -8,7 +8,7 @@
   <!---card-details-->
   <div class="card-details">
     <div class="card-tag">
-      <span>Shop</span>
+      <span>{{data?.platform?.subCategoryName}}</span>
     </div>
     <div class="card-title">
       <a href="javascript:">
@@ -16,17 +16,17 @@
       </a>
     </div>
     <div class="card-description">
-      <p>{{data?.shortDesc}}</p>
+      <p>{{data?.shortDescription | textWrap: 150}}</p>
     </div>
   </div><!---card-details-end-->
   <!--card-user-->
   <div class="card-user">
     <div class="card-user-img">
-      <img checkImageProfile [src]="data?.author?.profileImage" alt="">
+      <img checkImageProfile [src]="data?.author?.profileImg" alt="">
     </div>
     <div class="card-user-details">
-      <h3>By:<a href="javascript:">{{data?.author?.name}}</a></h3>
-      <span class="card-activity">Just Now</span>
+      <h3>By:<a href="javascript:">{{data?.author?.fullName}}</a></h3>
+      <span class="card-activity">{{data?.createdAt | momentDate}}</span>
     </div>
   </div><!--card-user-end-->
 

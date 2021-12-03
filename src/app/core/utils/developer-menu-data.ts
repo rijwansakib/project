@@ -16,6 +16,17 @@ export const menuItemsDeveloper: MenuSidebar[] = [
   },
   // Parent Gallery Folder
   {
+    id: '2',
+    title: 'Blogs',
+    icon: 'people',
+    hasSubMenu: false,
+    parentId: null,
+    routerLink: 'blogs',
+    href: null,
+    target: null
+  },
+  // Parent Gallery Folder
+  {
     id: '731',
     title: 'Gallery',
     icon: 'collections',

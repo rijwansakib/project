@@ -5,7 +5,7 @@
     <div class="header-main">
       <!---logo-area-->
       <div class="logo">
-        <a href="#"><img src="/assets/brand/endless-squad.png" alt=""></a>
+        <a routerLink="/"><img src="/assets/brand/endless-squad.png" alt=""></a>
       </div>
       <!--menu-area-->
       <div class="menu-area">
@@ -20,7 +20,8 @@
       <!--test-and-nav-bar-area-->
       <div class="testAndNavBar">
         <ul>
-          <li><a routerLink="/signup">Sign Up</a></li>
+          <li *ngIf="!isUserAuth"><a routerLink="/signup">Sign Up</a></li>
+          <li *ngIf="isUserAuth"><a routerLink="/my-profile">{{user?.username}}</a></li>
           <li class="bar"><span><i class="fa fa-bars"></i></span></li>
         </ul>
       </div>

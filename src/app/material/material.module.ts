@@ -22,6 +22,7 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 const materials = [
@@ -47,7 +48,8 @@ const materials = [
   MatDatepickerModule,
   MatNativeDateModule,
   OverlayModule,
-  MatBottomSheetModule
+  MatBottomSheetModule,
+  MatProgressSpinnerModule
 ];
 
 

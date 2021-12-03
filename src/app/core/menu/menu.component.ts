@@ -1,6 +1,10 @@
 import {AfterViewInit, Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {NavigationEnd, Router} from "@angular/router";
+import {User} from "../../interfaces/user";
+import {UserService} from "../../services/user.service";
+import {UserDataService} from "../../services/user-data.service";
+
 
 @Component({
   selector: 'app-menu',
@@ -27,16 +31,30 @@ export class MenuComponent implements OnInit, AfterViewInit {
     {id: '7', name: 'Contact Us', routerLink: '/contact', parentId: null, hasSubMenu: false, depth: 0},
   ];
 
+  // User Data
+  user: User = null;
+  isUserAuth = false;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     public router: Router,
+    public userService: UserService,
+    public userDataService: UserDataService,
   ) {
     window.addEventListener('scroll', this.scrolling, true);
   }
 
   ngOnInit() {
-
+    this.userService.getUserStatusListener().subscribe(() => {
+      this.isUserAuth = this.userService.getUserStatus();
+      if (this.isUserAuth) {
+        this.getLoggedInUserInfo();
+      }
+    });
+    this.isUserAuth = this.userService.getUserStatus();
+    if (this.isUserAuth) {
+      this.getLoggedInUserInfo();
+    }
 
   }
 
@@ -78,6 +96,20 @@ export class MenuComponent implements OnInit, AfterViewInit {
       }
     });
     // this.menuCtrService.expandActiveSubMenu(this.menus);
+  }
+
+  /**
+   * HTTP REQ HANDLE
+   */
+
+  private getLoggedInUserInfo() {
+    const select = 'fullName username';
+    this.userDataService.getLoggedInUserInfo(select)
+      .subscribe(res => {
+        this.user = res.data;
+      }, error => {
+        console.log(error);
+      });
   }
 
 

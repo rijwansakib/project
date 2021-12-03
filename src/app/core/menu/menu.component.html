@@ -6,7 +6,7 @@
 
     <div class="top-view">
       <div class="logo-thumb">
-        <img src="/assets/brand/logo-white.png" alt="">
+        <img src="/assets/brand/endless-squad.png" alt="">
       </div>
       <div class="action">
         <button mat-button class="icon-btn-big">
@@ -33,7 +33,7 @@
 <!--        </div>-->
 <!--      </div>-->
       <div class="company-link">
-        <a  href="https://softlabit.com/" target="_blank">Copyright &copy; esquire.com - 2021</a>
+        <a  href="https://softlabit.com/" target="_blank">Copyright &copy; endlesssquad.com - 2021</a>
       </div>
 
     </div>
@@ -41,7 +41,7 @@
   </mat-sidenav> <!-- END SIDENAV -->
 
   <mat-sidenav-content>
-    <app-header></app-header><!-- END HEADER MAIN -->
+    <app-header [isUserAuth]="isUserAuth" [user]="user"></app-header><!-- END HEADER MAIN -->
 
     <main class="main-content" [class.toolbar-small]="scrollPosition > 714">
       <ng-content></ng-content>

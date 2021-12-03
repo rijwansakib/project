@@ -6,7 +6,7 @@ import {Meta} from '@angular/platform-browser';
 import {MenuSidebar} from '../../interfaces/menu-sidebar';
 import {MenuCtrService} from '../../services/menu-ctr.service';
 import {NavigationEnd, Router} from '@angular/router';
-import {menuItemsDeveloper} from "../../core/utils/side-menu-data";
+import {menuItemsDeveloper} from "../../core/utils/developer-menu-data";
 
 @Component({
   selector: 'app-pages',
