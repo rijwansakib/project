@@ -57,4 +57,36 @@ export const menuItemsDeveloper: MenuSidebar[] = [
     href: null,
     target: null
   },
+  // Parent Accounts
+  {
+    id: 'ac-01',
+    title: 'Accounts',
+    icon: 'collections',
+    hasSubMenu: true,
+    parentId: null,
+    routerLink: null,
+    href: null,
+    target: null
+  },
+  {
+    id: 'ac-ch-0',
+    title: 'Charts of Accounts',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'ac-01',
+    routerLink: 'accounts/chart-of-account',
+    href: null,
+    target: null
+  },
+  // Parent Gallery
+  {
+    id: 'ac-ch-1',
+    title: 'Account Statement',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'ac-01',
+    routerLink: 'accounts/account-statement',
+    href: null,
+    target: null
+  },
 ]

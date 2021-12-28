@@ -15,9 +15,29 @@ const routes: Routes = [
         data: {preload: true, delay: false}
       },
       {
+        path: 'developers',
+        loadChildren: () => import('./developers/developers.module').then(m => m.DevelopersModule),
+        data: {preload: true, delay: false}
+      },
+      {
+        path: 'community',
+        loadChildren: () => import('./community/community.module').then(m => m.CommunityModule),
+        data: {preload: true, delay: false}
+      },
+      {
+        path: 'blogs',
+        loadChildren: () => import('./blogs/blogs.module').then(m => m.BlogsModule),
+        data: {preload: true, delay: false}
+      },
+      {
         path: 'my-profile',
         canActivate: [UserAuthGuard],
         loadChildren: () => import('./account/account.module').then(m => m.AccountModule),
+        data: {preload: false, delay: false}
+      },
+      {
+        path: 'test',
+        loadChildren: () => import('./test/test.module').then(m => m.TestModule),
         data: {preload: false, delay: false}
       },
     ]

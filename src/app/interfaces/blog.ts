@@ -12,4 +12,5 @@ export interface Blog {
   isFeatured?: number;
   createdAt?: Date;
   updatedAt?: Date;
+  select?: boolean;
 }

@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'image-folder',
         loadChildren: () => import('./image-folder/image-folder.module').then(m => m.ImageFolderModule),
       },
+      {
+        path: 'accounts',
+        loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule),
+      },
     ]
   },
 ];

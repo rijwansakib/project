@@ -9,6 +9,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {NgxSpinnerModule} from "ngx-spinner";
 import {AngularEditorModule} from "@kolkov/angular-editor";
+import {DirectivesModule} from "../../../shared/directives/directives.module";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {AngularEditorModule} from "@kolkov/angular-editor";
     ReactiveFormsModule,
     FlexLayoutModule,
     NgxSpinnerModule,
-    AngularEditorModule
+    AngularEditorModule,
+    DirectivesModule,
+    NgxPaginationModule
   ]
 })
 export class BlogsModule { }

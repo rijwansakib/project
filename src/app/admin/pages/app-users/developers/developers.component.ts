@@ -103,9 +103,6 @@ export class DevelopersComponent implements OnInit {
       .subscribe(() => {
         this.getCustomerList();
       });
-
-    // Get Gallery Data
-    this.getCustomerList();
   }
 
   ngAfterViewInit(): void {

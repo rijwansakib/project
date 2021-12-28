@@ -249,3 +249,50 @@ hr{
   -ms-user-select: none;
   user-select: none;
 }
+
+
+/* =NGX PAGINATION
+----------------------------------------------------------------------------- */
+.pagination-container {
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  margin: 5px 10px;
+  padding: 10px;
+}
+.data-pagination {
+  width: 100%;
+  text-align: center;
+
+}
+.data-pagination .ngx-pagination {
+  font-family: $font-en-primary;
+  margin-bottom: 0;
+}
+
+.data-pagination .ngx-pagination li a {
+  font-family: $font-en-primary;
+  border-radius: 22px;
+  padding: 6px 14px;
+}
+
+.data-pagination .ngx-pagination .current {
+  background: $color-primary;
+  border-radius: 22px;
+  padding: 6px 14px;
+
+}
+
+
+/* =COMMON ESSENTIAL
+----------------------------------------------------------------------------- */
+
+.admin-data-sec {
+  min-height: calc(100vh - 85px);
+}
+
+.dropdown-active {
+  background: #C1E0FF !important;
+  &:hover {
+    background-color: #C1E0FF !important;
+  }
+}
