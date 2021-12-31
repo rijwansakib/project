@@ -1,0 +1,40 @@
+<section class="form-section">
+
+  <div class="header-dialog">
+    <h1>Portfolio Introduction</h1>
+  </div>
+
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()"
+        fxLayout="column"
+        fxLayoutAlign="space-around center">
+
+    <div class="imag-view">
+      <img [src]="pickedImage" alt="" (click)="openComponentDialog()">
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Enter portfolio name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Introduction About You</mat-label>
+      <textarea [rows]="6" [maxlength]="160" formControlName="introBio" matInput
+                placeholder="Introduce yourself with some attractive sentence"></textarea>
+      <mat-hint>Max length {{dataForm.get('introBio').value | characterCount}} / 160</mat-hint>
+    </mat-form-field>
+
+
+    <button class="submit-btn" mat-raised-button color="primary" type="submit">
+      <mat-icon>done</mat-icon>
+      Save Data
+    </button>
+  </form>
+</section>
+
+
+
+<!-- LOADING TEMPLATE -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

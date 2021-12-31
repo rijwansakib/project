@@ -1,3 +1,7 @@
-@import "src/theme/variables";
-@import "src/theme/exports/table-scroll";
-@import "src/theme/exports/search-table";
+
+
+
+
+::ng-deep .ql-editor {
+  height: 250px !important;
+}

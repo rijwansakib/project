@@ -33,8 +33,8 @@ const routes: Routes = [
         loadChildren: () => import('./image-folder/image-folder.module').then(m => m.ImageFolderModule),
       },
       {
-        path: 'accounts',
-        loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule),
+        path: 'portfolio',
+        loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule),
       },
     ]
   },

@@ -9,6 +9,7 @@ import {ArrayStringPipe} from './array-string.pipe';
 import {TextWrapPipe} from './text-wrap.pipe';
 import {FormatBytesPipe} from './format-bytes.pipe';
 import {MomentDatePipe} from "./moment-date.pipe";
+import { CharacterCountPipe } from './character-count.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {MomentDatePipe} from "./moment-date.pipe";
     ArrayStringPipe,
     TextWrapPipe,
     FormatBytesPipe,
-    MomentDatePipe
+    MomentDatePipe,
+    CharacterCountPipe
   ],
   imports: [
     CommonModule
@@ -34,7 +36,8 @@ import {MomentDatePipe} from "./moment-date.pipe";
     SlugToNormalPipe,
     TextWrapPipe,
     FormatBytesPipe,
-    MomentDatePipe
+    MomentDatePipe,
+    CharacterCountPipe
   ]
 })
 export class PipesModule {

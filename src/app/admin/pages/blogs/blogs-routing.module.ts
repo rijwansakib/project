@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {BlogsComponent} from "./blogs.component";
-import {AddBlogComponent} from "./add-blog/add-blog.component";
+import {ActiveBlogsComponent} from "./active-blogs/active-blogs.component";
+import {PendingBlogsComponent} from "./pending-blogs/pending-blogs.component";
 
 const routes: Routes = [
-  {path: '', component: BlogsComponent},
-  {path: 'add-blog', component: AddBlogComponent},
-  {path: 'edit-blog/:id', component: AddBlogComponent},
+  {path: '', redirectTo: 'active-blogs'},
+  {path: 'active-blogs', component: ActiveBlogsComponent},
+  {path: 'pending-blogs', component: PendingBlogsComponent},
 ];
 
 @NgModule({

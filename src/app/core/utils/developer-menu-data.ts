@@ -59,8 +59,8 @@ export const menuItemsDeveloper: MenuSidebar[] = [
   },
   // Parent Accounts
   {
-    id: 'ac-01',
-    title: 'Accounts',
+    id: 'pf-01',
+    title: 'Portfolio',
     icon: 'collections',
     hasSubMenu: true,
     parentId: null,
@@ -69,23 +69,62 @@ export const menuItemsDeveloper: MenuSidebar[] = [
     target: null
   },
   {
-    id: 'ac-ch-0',
-    title: 'Charts of Accounts',
+    id: 'pf-ch-0',
+    title: 'Introduction',
     icon: 'folder',
     hasSubMenu: false,
-    parentId: 'ac-01',
-    routerLink: 'accounts/chart-of-account',
+    parentId: 'pf-01',
+    routerLink: 'portfolio/introduction',
     href: null,
     target: null
   },
-  // Parent Gallery
   {
-    id: 'ac-ch-1',
-    title: 'Account Statement',
+    id: 'pf-ch-1',
+    title: 'About',
     icon: 'folder',
     hasSubMenu: false,
-    parentId: 'ac-01',
-    routerLink: 'accounts/account-statement',
+    parentId: 'pf-01',
+    routerLink: 'portfolio/about',
+    href: null,
+    target: null
+  },
+  {
+    id: 'pf-ch-2',
+    title: 'Services',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'pf-01',
+    routerLink: 'portfolio/services',
+    href: null,
+    target: null
+  },
+  {
+    id: 'pf-ch-3',
+    title: 'Experiences',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'pf-01',
+    routerLink: 'portfolio/experiences',
+    href: null,
+    target: null
+  },
+  {
+    id: 'pf-ch-4',
+    title: 'Works',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'pf-01',
+    routerLink: 'portfolio/works',
+    href: null,
+    target: null
+  },
+  {
+    id: 'pf-ch-5',
+    title: 'Contact',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'pf-01',
+    routerLink: 'portfolio/contact',
     href: null,
     target: null
   },

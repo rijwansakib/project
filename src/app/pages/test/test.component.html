@@ -1,22 +1,11 @@
-
-<div class="table-search">
-  <input type="text" name="" id="" value="" placeholder="Search">
-  <button><i class="fa fa-search"></i></button>
+<div>
+  <!-- Text Editor -->
+  <quill-editor #editor [modules]="modules" (onEditorCreated)="editorCreated($event)" placeholder="Enter Text"
+                (onSelectionChanged)="onSelectionChanged($event)" (onContentChanged)="onContentChanged($event)" name="content"
+                formControlName="content" [(ngModel)]="htmlString"></quill-editor>
 </div>
-
-<div class="table-wrapper">
-  <table>
-    <tr>
-      <th class="t-checkbox"><mat-checkbox></mat-checkbox></th>
-      <th>_id</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-    <tr *ngFor="let data of dummyDataList">
-      <td class="t-checkbox"><mat-checkbox></mat-checkbox></td>
-      <td>{{data._id}}</td>
-      <td>{{data.name}}</td>
-      <td>{{data.age}}</td>
-    </tr>
-  </table>
+<div>
+  <h2><u>Preview</u></h2>
+  <!-- Preview -->
+  <quill-view-html [content]="htmlString"></quill-view-html>
 </div>

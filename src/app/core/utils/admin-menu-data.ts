@@ -777,14 +777,34 @@ export const menuItemsSuperAdmin: MenuSidebar[] = [
     href: null,
     target: null
   },
-  // Parent Gallery Folder
   {
     id: '2blog',
     title: 'Blogs',
+    icon: 'collections',
+    hasSubMenu: true,
+    parentId: null,
+    routerLink: null,
+    href: null,
+    target: null
+  },
+  // Parent Gallery Folder
+  {
+    id: 'c-blog-0',
+    title: 'Active Blogs',
     icon: 'people',
     hasSubMenu: false,
-    parentId: null,
-    routerLink: 'blogs',
+    parentId: '2blog',
+    routerLink: 'blogs/active-blogs',
+    href: null,
+    target: null
+  },
+  {
+    id: 'c-blog-1',
+    title: 'Pending Blogs',
+    icon: 'people',
+    hasSubMenu: false,
+    parentId: '2blog',
+    routerLink: 'blogs/pending-blogs',
     href: null,
     target: null
   },

@@ -38,3 +38,10 @@ export const USER_TYPES: Select[] = [
   {value: UserTypeEnum.USER, viewValue: 'User'}
 ];
 
+
+export const COUNTRIES: Select[] = [
+  {viewValue: 'Bangladesh', value: 'bangladesh'},
+  {viewValue: 'USA', value: 'usa'},
+  {viewValue: 'India', value: 'india'},
+  {viewValue: 'Pakistan', value: 'pakistan'}
+];

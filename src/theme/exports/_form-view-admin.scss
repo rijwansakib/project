@@ -1,13 +1,19 @@
-.header-dialog {
-  margin: 10px 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+@import "src/theme/variables";
+.form-section {
+  width: 95%;
+  margin: 16px auto;
+  max-width: 850px;
 }
+
+.header-dialog {
+  h1  {
+    font-family: $font-en-primary;
+    text-align: center;
+  }
+}
+
 form{
-  width: 960px;
+  width: 100%;
   margin: 20px auto;
 
   .imag-view {
@@ -30,11 +36,4 @@ form{
     width: 100%;
   }
 
-  button {
-    ::ng-deep {
-      span {
-        color: #FFFFFF;
-      }
-    }
-  }
 }
