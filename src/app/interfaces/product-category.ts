@@ -6,4 +6,7 @@ export interface ProductCategory {
   priority?: number;
   attributes?: any[];
   image?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+  select?: boolean;
 }

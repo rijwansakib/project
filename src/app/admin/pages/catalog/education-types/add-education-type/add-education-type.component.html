@@ -1,0 +1,35 @@
+<section class="form-section">
+
+  <div class="header-dialog">
+    <h1>Education Type</h1>
+  </div>
+
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()"
+        fxLayout="column"
+        #templateForm="ngForm"
+        fxLayoutAlign="space-around center">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput placeholder="Enter title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Color</mat-label>
+      <input formControlName="color" matInput placeholder="Enter color">
+    </mat-form-field>
+
+    <button class="submit-btn" mat-raised-button color="primary" type="submit">
+      <mat-icon>done</mat-icon>
+      Save Data
+    </button>
+  </form>
+</section>
+
+
+
+<!-- LOADING TEMPLATE -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+

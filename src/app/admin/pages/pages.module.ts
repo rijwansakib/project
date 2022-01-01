@@ -24,18 +24,8 @@ const routes: Routes = [
         canActivate: [CheckAuthAccessGuard]
       },
       {
-        path: 'categories',
-        loadChildren: () => import('./categories/categories.module').then(m => m.CategoriesModule),
-        canActivate: [CheckAuthAccessGuard]
-      },
-      {
-        path: 'sub-categories',
-        loadChildren: () => import('./sub-categories/sub-categories.module').then(m => m.SubCategoriesModule),
-        canActivate: [CheckAuthAccessGuard]
-      },
-      {
-        path: 'tags',
-        loadChildren: () => import('./tags/tags.module').then(m => m.TagsModule),
+        path: 'catalog',
+        loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule),
         canActivate: [CheckAuthAccessGuard]
       },
       {

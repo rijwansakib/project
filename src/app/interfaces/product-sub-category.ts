@@ -8,4 +8,7 @@ export interface ProductSubCategory {
   brand?: any;
   category: string | ProductCategory;
   attributes?: any[];
+  createdAt?: Date;
+  updatedAt?: Date;
+  select?: boolean;
 }

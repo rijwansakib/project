@@ -1,0 +1,39 @@
+<section class="form-section">
+
+  <div class="header-dialog">
+    <h1>Category</h1>
+  </div>
+
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()"
+        fxLayout="column"
+        #templateForm="ngForm"
+        fxLayoutAlign="space-around center">
+
+    <div class="imag-view">
+      <img [src]="pickedImage" alt="" (click)="openComponentDialog()">
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="categoryName" matInput placeholder="Enter title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Priority</mat-label>
+      <input formControlName="priority" matInput placeholder="Enter priority" digitOnly>
+    </mat-form-field>
+
+    <button class="submit-btn" mat-raised-button color="primary" type="submit">
+      <mat-icon>done</mat-icon>
+      Save Data
+    </button>
+  </form>
+</section>
+
+
+
+<!-- LOADING TEMPLATE -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+

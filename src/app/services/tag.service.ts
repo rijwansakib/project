@@ -17,55 +17,62 @@ export class TagService {
   ) {
   }
 
-  /**
-   * TAG
-   */
+
   addTag(data: Tag) {
-    return this.httpClient.post<{ message: string }>(API_TAG + 'add-single-tag', data);
-  }
-
-  insertManyTag(data: Tag[]) {
-    return this.httpClient.post<{message: string}>(API_TAG + 'add-multiple-tag', data);
+    return this.httpClient.post<{ message: string }>(API_TAG + 'add-tag', data);
   }
 
 
-  getAllTags(pagination?: Pagination) {
-    if (pagination) {
-      let params = new HttpParams();
-      params = params.append('pageSize', pagination.pageSize);
-      params = params.append('page', pagination.currentPage);
-      return this.httpClient.get<{ data: Tag[], message?: string, count: number }>(API_TAG + 'get-all-tags', {params});
-    } else {
-      return this.httpClient.get<{ data: Tag[], message?: string, count: number }>(API_TAG + 'get-all-tags');
-    }
-
+  getAllTags(paginate: Pagination, sort: any, filter?: any, select?: string) {
+    return this.httpClient.post<{ data: Tag[], count: number }>(API_TAG + 'get-all-tags', {
+      paginate,
+      sort,
+      filter,
+      select
+    });
   }
 
-
-  getTagByTagId(id: string) {
+  getTagByTagID(id: string) {
     return this.httpClient.get<{ data: Tag, message?: string }>(API_TAG + 'get-tag-by-tag-id/' + id);
   }
 
+  getSingleTagBySlug(slug: string) {
+    return this.httpClient.get<{ data: Tag, message: string }>(API_TAG + 'get-single-tag-by-slug/' + slug);
+  }
+
   editTagData(data: Tag) {
-    return this.httpClient.put<{message?: string}>(API_TAG + 'edit-tag-by-tag', data);
+    return this.httpClient.put<{ message?: string }>(API_TAG + 'edit-tag-by-tag', data);
+  }
+
+  editMultipleTagById(ids: string[], data: any) {
+    return this.httpClient.put<{ message?: string }>(API_TAG + 'edit-multiple-tag-by-id', {
+      ids,
+      data
+    });
   }
 
   deleteTag(id: string) {
     return this.httpClient.delete<{ message?: string }>(API_TAG + 'delete-tag-by-id/' + id);
   }
 
-
-  getSearchTag(searchTerm: string, pagination?: Pagination) {
-    const paginate = pagination;
-    let params = new HttpParams();
-    params = params.append('q', searchTerm);
-    params = params.append('pageSize', pagination.pageSize);
-    params = params.append('currentPage', pagination.currentPage);
-    return this.httpClient.post<{ data: Tag[], count: number }>(API_TAG + 'get-tags-by-search', paginate, {params});
+  deleteMultipleTagById(ids: string[]) {
+    return this.httpClient.post<{ message: string }>(API_TAG + 'delete-multiple-tags-by-id', {ids});
   }
 
-  // router.post('/get-tags-by-search', controller.getTagsBySearch);
 
+  // router.put('/edit-multiple-tag-by-id', checkUserAuth, controller.editMultipleTagById);
+
+
+  getSearchProduct(searchTerm: string, pagination?: Pagination, filter?: any) {
+
+    let params = new HttpParams();
+    params = params.append('q', searchTerm);
+    if (pagination) {
+      params = params.append('pageSize', pagination.pageSize);
+      params = params.append('currentPage', pagination.currentPage);
+    }
+    return this.httpClient.post<{ data: Tag[], count: number }>(API_TAG + 'get-tags-by-search', {filter}, {params});
+  }
 
 
 }

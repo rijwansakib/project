@@ -738,7 +738,7 @@ export const menuItemsSuperAdmin: MenuSidebar[] = [
   // },
   // Parent Products
   {
-    id: '3',
+    id: 'cat-0',
     title: 'Catalog',
     icon: 'category',
     hasSubMenu: true,
@@ -748,35 +748,67 @@ export const menuItemsSuperAdmin: MenuSidebar[] = [
     target: null
   },
   {
-    id: 'b10',
-    title: 'Tags',
-    icon: 'follow_the_signs',
-    hasSubMenu: false,
-    parentId: '3',
-    routerLink: 'tags',
-    href: null,
-    target: null
-  },
-  {
-    id: 'b3',
+    id: 'cat-ch-0',
     title: 'Categories',
     icon: 'follow_the_signs',
     hasSubMenu: false,
-    parentId: '3',
-    routerLink: 'categories',
+    parentId: 'cat-0',
+    routerLink: 'catalog/categories',
     href: null,
     target: null
   },
   {
-    id: 'b3',
+    id: 'cat-ch-1',
     title: 'Sub Categories',
     icon: 'follow_the_signs',
     hasSubMenu: false,
-    parentId: '3',
-    routerLink: 'sub-categories',
+    parentId: 'cat-0',
+    routerLink: 'catalog/sub-categories',
     href: null,
     target: null
   },
+  {
+    id: 'cat-ch-2',
+    title: 'Tags',
+    icon: 'follow_the_signs',
+    hasSubMenu: false,
+    parentId: 'cat-0',
+    routerLink: 'catalog/tags',
+    href: null,
+    target: null
+  },
+  {
+    id: 'cat-ch-3',
+    title: 'Service Types',
+    icon: 'follow_the_signs',
+    hasSubMenu: false,
+    parentId: 'cat-0',
+    routerLink: 'catalog/service-types',
+    href: null,
+    target: null
+  },
+  {
+    id: 'cat-ch-4',
+    title: 'Education Types',
+    icon: 'follow_the_signs',
+    hasSubMenu: false,
+    parentId: 'cat-0',
+    routerLink: 'catalog/education-types',
+    href: null,
+    target: null
+  },
+  {
+    id: 'cat-ch-5',
+    title: 'Experience Types',
+    icon: 'follow_the_signs',
+    hasSubMenu: false,
+    parentId: 'cat-0',
+    routerLink: 'catalog/experience-types',
+    href: null,
+    target: null
+  },
+
+  // Parent Gallery Folder
   {
     id: '2blog',
     title: 'Blogs',
@@ -787,7 +819,7 @@ export const menuItemsSuperAdmin: MenuSidebar[] = [
     href: null,
     target: null
   },
-  // Parent Gallery Folder
+
   {
     id: 'c-blog-0',
     title: 'Active Blogs',

@@ -119,7 +119,7 @@ export class DeveloperComponent implements OnInit {
 
 
   private getAllCategory() {
-    this.categoryService.getAllCategory()
+    this.categoryService.getAllCategories()
       .subscribe(res => {
         this.categories = res.data;
       }, error => {
