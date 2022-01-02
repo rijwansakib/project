@@ -118,13 +118,21 @@
   transition: all 0.2s linear;
 }
 
-.menu-area ul li:first-child a {
+.active {
   background-color: $white-color;
+  color: $secondery-color !important;
+  i {
+    color: $secondery-color !important;
+  }
 }
 
-.menu-area ul li:first-child a i {
-  color: $secondery-color;
-}
+//.menu-area ul li:first-child a {
+//  background-color: $white-color;
+//}
+//
+//.menu-area ul li:first-child a i {
+//  color: $secondery-color;
+//}
 
 .menu-area ul li a:hover {
   transform: translateX(6px);

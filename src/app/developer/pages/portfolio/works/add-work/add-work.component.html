@@ -1,1 +1,52 @@
-<p>add-work works!</p>
+<section class="form-section">
+
+  <div class="header-dialog">
+    <h1>Work</h1>
+  </div>
+
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()"
+        fxLayout="column"
+        #templateForm="ngForm"
+        fxLayoutAlign="space-around center">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Service Type</mat-label>
+      <mat-select formControlName="serviceType">
+        <mat-option *ngFor="let data of serviceTypes" [value]="data._id">
+          {{  data.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Enter name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Url</mat-label>
+      <input formControlName="url" matInput placeholder="Enter url">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Short Description</mat-label>
+      <textarea [rows]="6" [maxlength]="160" formControlName="description" matInput
+                placeholder="Write something about your service..."></textarea>
+      <mat-hint>Max length {{dataForm.get('description').value | characterCount}} / 160</mat-hint>
+    </mat-form-field>
+
+    <button class="submit-btn" mat-raised-button color="primary" type="submit">
+      <mat-icon>done</mat-icon>
+      Save Data
+    </button>
+  </form>
+</section>
+
+
+
+<!-- LOADING TEMPLATE -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+

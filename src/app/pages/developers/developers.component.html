@@ -2,18 +2,17 @@
   <app-developer-profile-card *ngFor="let data of customers | paginate: { itemsPerPage: productsPerPage, currentPage: currentPage, totalItems: totalProducts }; let i = index" [data]="data"></app-developer-profile-card>
 </div>
 
-<div class="pagination-container" *ngIf="customers.length > 0">
-  <mat-card class="p-0 text-center">
-    <pagination-controls
-      class="product-pagination"
-      autoHide="true"
-      maxSize="10"
-      (pageChange)="onPageChanged($event)">
-    </pagination-controls>
-  </mat-card>
-</div>
+<div class="pagination-container">
+  <pagination-controls
+    class="data-pagination"
+    [autoHide]="true"
+    [maxSize]="15"
+    (pageChange)="onPageChanged($event)">
+  </pagination-controls>
+</div>     <!-- END PAGINATION -->
 
 
 <!-- LOADING TEMPLATE -->
-<ngx-spinner style="width: 100vw; height: 100vh" bdColor="rgba(0,0,0,0.25)" size="medium" color="#fff"
-             type="ball-clip-rotate" [fullScreen]="true"><p style="color: white"> Loading... </p></ngx-spinner>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>

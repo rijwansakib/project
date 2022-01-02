@@ -1,5 +1,5 @@
 <!---card-->
-<div class="card">
+<div class="card" [routerLink]="['/blog-details', data?.slug]">
   <!---card-img-start-->
   <div class="card-img">
     <img checkImageDefault [src]="data?.image" alt="">

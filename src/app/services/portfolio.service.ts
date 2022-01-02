@@ -20,8 +20,12 @@ export class PortfolioService {
   /**
    * BRAND
    */
-  addPortfolio(data: Portfolio) {
-    return this.httpClient.post<{ message: string }>(API_PORTFOLIO + 'add-portfolio', data);
+  addPortfolioBasic(data: Portfolio) {
+    return this.httpClient.post<{ message: string }>(API_PORTFOLIO + 'add-portfolio-basic-data', data);
+  }
+
+  addPortfolioArray(data: Portfolio) {
+    return this.httpClient.post<{ message: string, success: boolean }>(API_PORTFOLIO + 'add-portfolio-array-data', data);
   }
 
 
@@ -46,7 +50,15 @@ export class PortfolioService {
     return this.httpClient.get<{ data: Portfolio, success: boolean }>(API_PORTFOLIO + 'get-portfolio-by-user',{params});
   }
 
-  // router.get('/get-portfolio-by-portfolio-id', checkUserAuth, controller.getPortfolioByUserId);
+  getPortfolioByUserId(userId: string, select?: string) {
+    let params = new HttpParams();
+    if (select) {
+      params = params.append('select', select);
+    }
+    return this.httpClient.get<{ data: Portfolio, success: boolean }>(API_PORTFOLIO + 'get-portfolio-by-user-id/' + userId,{params});
+  }
+
+  // router.get('/get-portfolio-by-user-id/:userId', checkUserAuth, controller.getPortfolioByUserId);
 
   getSinglePortfolioBySlug(slug: string) {
     return this.httpClient.get<{ data: Portfolio, message: string }>(API_PORTFOLIO + 'get-single-portfolio-by-slug/' + slug);

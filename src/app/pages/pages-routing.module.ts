@@ -30,6 +30,11 @@ const routes: Routes = [
         data: {preload: true, delay: false}
       },
       {
+        path: 'blog-details',
+        loadChildren: () => import('./blog-details/blog-details.module').then(m => m.BlogDetailsModule),
+        data: {preload: true, delay: false}
+      },
+      {
         path: 'my-profile',
         canActivate: [UserAuthGuard],
         loadChildren: () => import('./account/account.module').then(m => m.AccountModule),

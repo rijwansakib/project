@@ -13,8 +13,8 @@
     <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
   </div>
   <div class="buttons">
-    <button [routerLink]="'/portfolio/chat'">Message</button>
-    <button [routerLink]="'/portfolio'">Portfolio</button>
+    <button [routerLink]="'/portfolio/chat'" [queryParams]="{user: data._id}">Message</button>
+    <button [routerLink]="'/portfolio'" [queryParams]="{user: data._id}">Portfolio</button>
   </div>
   <div class="social-share">
     <div class="row">

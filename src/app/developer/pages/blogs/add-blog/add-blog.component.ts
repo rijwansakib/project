@@ -12,6 +12,9 @@ import {StorageService} from "../../../../services/storage.service";
 import {UserDataService} from "../../../../services/user-data.service";
 import {User} from "../../../../interfaces/user";
 import {ProductSubCategory} from "../../../../interfaces/product-sub-category";
+import {MatDialog} from "@angular/material/dialog";
+import {ImageGalleryDialogComponent} from "../../image-gallery-dialog/image-gallery-dialog.component";
+import {ImageGallery} from "../../../../interfaces/image-gallery";
 
 @Component({
   selector: 'app-add-blog',
@@ -67,39 +70,17 @@ export class AddBlogComponent implements OnInit {
     private storageService: StorageService,
     public router: Router,
     private spinner: NgxSpinnerService,
-    private blogService: BlogService
+    private blogService: BlogService,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
-    this.dataForm = this.fb.group({
-      platform: [null, Validators.required],
-      title: [null, Validators.required],
-      slug: [null, Validators.required],
-      shortDescription: [null, Validators.required],
-      body: [null, Validators.required],
-      image: [null],
-    });
+
+    // INIT FORM
+    this.initFormGroup();
 
     // Main Data
     this.getLoggedInUserInfo();
-
-    this.pickedImage = this.placeholder;
-
-    // Image From state
-    if (!this.id) {
-      if (this.storageService.getStoredInput('BLOG_INPUT')) {
-        this.dataForm.patchValue(this.storageService.getStoredInput('BLOG_INPUT'));
-      }
-
-      if (history.state.images) {
-        this.needSessionDestroy = true;
-        this.pickedImage = history.state.images[0].url;
-        this.dataForm.patchValue(
-          {image: this.pickedImage}
-        );
-      }
-
-    }
 
     this.autoGenerateSlug();
 
@@ -115,24 +96,27 @@ export class AddBlogComponent implements OnInit {
   }
 
   /**
+   * INIT FORM
+   */
+  private initFormGroup() {
+    this.dataForm = this.fb.group({
+      platform: [null, Validators.required],
+      title: [null, Validators.required],
+      slug: [null, Validators.required],
+      shortDescription: [null, Validators.required],
+      body: [null, Validators.required],
+      image: [null],
+    });
+
+    this.pickedImage = this.placeholder;
+  }
+
+  /**
    * SET FORM DATA
    */
   private setFormData() {
     this.dataForm.patchValue(this.blog);
-
-    if (this.storageService.getStoredInput('BLOG_INPUT')) {
-      this.dataForm.patchValue(this.storageService.getStoredInput('BLOG_INPUT'));
-    }
-
-    if (history.state.images) {
-      this.needSessionDestroy = true;
-      this.pickedImage = history.state.images[0].url;
-      this.dataForm.patchValue(
-        {image: this.pickedImage}
-      );
-    } else {
-      this.pickedImage = this.blog.image ? this.blog.image : this.placeholder;
-    }
+    this.pickedImage = this.blog.image ? this.blog.image : this.placeholder;
   }
 
   autoGenerateSlug() {
@@ -162,17 +146,9 @@ export class AddBlogComponent implements OnInit {
       const finalData = {...this.dataForm.value, ...{_id: this.blog._id}};
       this.editBlogData(finalData);
     } else {
-      this.addBlog(this.dataForm.value);
+      const finalData = {...this.dataForm.value, ...{votes: 0}}
+      this.addBlog(finalData);
     }
-  }
-
-  /**
-   * ON HOLD INPUT DATA
-   */
-
-  onHoldInputData() {
-    this.needSessionDestroy = false;
-    this.storageService.storeInputData(this.dataForm?.value, 'BLOG_INPUT');
   }
 
 
@@ -233,13 +209,35 @@ export class AddBlogComponent implements OnInit {
       });
   }
 
-  // tslint:disable-next-line:use-lifecycle-interface
+  /**
+   * OPEN COMPONENT DIALOG
+   */
+
+  public openComponentDialog() {
+    const dialogRef = this.dialog.open(ImageGalleryDialogComponent, {
+      panelClass: ['theme-dialog', 'full-screen-modal-lg'],
+      width: '100%',
+      minHeight: '100%',
+      autoFocus: false,
+      disableClose: true
+    });
+    dialogRef.afterClosed().subscribe(dialogResult => {
+      if (dialogResult) {
+        if (dialogResult.data && dialogResult.data.length > 0) {
+          const images: ImageGallery[] = dialogResult.data
+          this.dataForm.patchValue(
+            {image: images[0].url}
+          );
+          this.pickedImage = images[0].url;
+        }
+      }
+    });
+  }
+
+
   ngOnDestroy() {
     if (this.sub) {
       this.sub.unsubscribe();
-    }
-    if (this.needSessionDestroy) {
-      this.storageService.removeSessionData('BLOG_INPUT');
     }
   }
 

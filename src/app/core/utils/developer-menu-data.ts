@@ -110,6 +110,16 @@ export const menuItemsDeveloper: MenuSidebar[] = [
   },
   {
     id: 'pf-ch-4',
+    title: 'Educations',
+    icon: 'folder',
+    hasSubMenu: false,
+    parentId: 'pf-01',
+    routerLink: 'portfolio/educations',
+    href: null,
+    target: null
+  },
+  {
+    id: 'pf-ch-5',
     title: 'Works',
     icon: 'folder',
     hasSubMenu: false,

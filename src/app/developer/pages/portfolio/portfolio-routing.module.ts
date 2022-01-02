@@ -9,6 +9,8 @@ import {AddExperienceComponent} from "./experience/add-experience/add-experience
 import {WorksComponent} from "./works/works.component";
 import {AddWorkComponent} from "./works/add-work/add-work.component";
 import {ContactComponent} from "./contact/contact.component";
+import {EducationsComponent} from "./educations/educations.component";
+import {AddEducationComponent} from "./educations/add-education/add-education.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'introduction'},
@@ -20,6 +22,9 @@ const routes: Routes = [
   {path: 'experiences', component: ExperienceComponent},
   {path: 'add-experience', component: AddExperienceComponent},
   {path: 'edit-experience/:id', component: AddExperienceComponent},
+  {path: 'educations', component: EducationsComponent},
+  {path: 'add-education', component: AddEducationComponent},
+  {path: 'edit-education/:id', component: AddEducationComponent},
   {path: 'works', component: WorksComponent},
   {path: 'add-work', component: AddWorkComponent},
   {path: 'edit-work/:id', component: AddWorkComponent},

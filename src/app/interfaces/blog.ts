@@ -7,9 +7,11 @@ export interface Blog {
   title: string;
   platform: string | ProductSubCategory;
   shortDescription: string;
+  body?: string;
   image: string;
   author: string | User;
   isFeatured?: number;
+  votes?: number;
   createdAt?: Date;
   updatedAt?: Date;
   select?: boolean;

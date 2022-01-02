@@ -13,9 +13,7 @@
         fxLayout="column"
         fxLayoutAlign="space-around center">
 
-    <div (click)="onHoldInputData()" class="imag-view"
-         [routerLink]="[id ? '../../../' : '../../', 'image-gallery']"
-         [state]="{url: router.url}">
+    <div (click)="openComponentDialog()" class="imag-view">
       <img [src]="pickedImage" alt="">
     </div>
 

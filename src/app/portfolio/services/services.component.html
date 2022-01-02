@@ -20,7 +20,7 @@
 
     <!---section1-main-->
     <div class="service-section1-main">
-      <app-service-card [cardData]="cardData" *ngFor="let cardData of serviceArray"></app-service-card>
+      <app-service-card [cardData]="cardData" *ngFor="let cardData of []"></app-service-card>
     </div>
 
   </section> <!---service-section1-end--->
@@ -46,7 +46,7 @@
     <!----testomonials-carousel-->
     <div>
       <owl-carousel-o class="testimonial-carousel" [options]="carouselCntrlService.testiMonialCarousel">
-        <ng-container *ngFor="let testimonialMemberData of testimonialMemberDataArray">
+        <ng-container *ngFor="let testimonialMemberData of []">
           <ng-template carouselSlide>
             <app-testimonial-carousel-card
               [testimonialMemberData]='testimonialMemberData'></app-testimonial-carousel-card>
@@ -75,7 +75,7 @@
     </div><!---section-header--->
     <!---price-plan-area-->
     <div class="price-plan-area">
-      <app-price-card *ngFor="let priceData of pricePlanArray" [priceData]="priceData"></app-price-card>
+      <app-price-card *ngFor="let priceData of []" [priceData]="priceData"></app-price-card>
     </div><!---price-plan-area-->
 
   </section>  <!---service-section-3-end-->
@@ -101,7 +101,7 @@
     <div class="brand-logo-area">
       <!--brand-logo-->
       <owl-carousel-o class="brand-carousel" [options]="carouselCntrlService.brandLogo">
-        <ng-container *ngFor="let data of  brandLogoArray">
+        <ng-container *ngFor="let data of  []">
           <ng-template carouselSlide>
             <div class="brand-logo">
               <a [routerLink]="[data?.brandLogoRouterLink]" routerLinkActive="router-link-active"><img

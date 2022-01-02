@@ -54,6 +54,7 @@ export class ReloadService {
   private refreshFaq = new Subject<void>();
   private refreshCookie = new Subject<void>();
   private refreshPromoPage = new Subject<void>();
+  private refreshComment = new Subject<void>();
   private refreshData = new Subject<void>();
 
   get refreshData$() {
@@ -573,6 +574,17 @@ export class ReloadService {
 
   needRefreshCart$() {
     this.refreshCart.next();
+  }
+
+  /**
+   * Comment
+   */
+  get refreshComment$() {
+    return this.refreshComment;
+  }
+
+  needRefreshComment$() {
+    this.refreshComment.next();
   }
 
 }

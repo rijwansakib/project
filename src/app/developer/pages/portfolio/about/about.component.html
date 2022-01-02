@@ -14,7 +14,7 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Your Bio</mat-label>
-      <textarea [rows]="6" [maxlength]="160" formControlName="bio" matInput
+      <textarea [rows]="6" [maxlength]="200" formControlName="bio" matInput
                 placeholder="Write your bio with some attractive sentence"></textarea>
       <mat-hint>Max length {{dataForm.get('bio').value | characterCount}} / 160</mat-hint>
     </mat-form-field>

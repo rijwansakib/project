@@ -3,8 +3,8 @@
     <!--home-header--->
     <div class="home-header-area">
         <ul>
-            <li><a href="tel:+1-202-555-0135"><span><i class="fa fa-mobile-alt"></i></span>+1-202-555-0135</a></li>
-            <li><a href="mailto:hello@example.com"><span><i class="fa fa-envelope"></i></span>hello@example.com</a></li>
+            <li><a href="tel:+1-202-555-0135"><span><i class="fa fa-mobile-alt"></i></span>{{portfolio?.phoneNo}}</a></li>
+            <li><a href="mailto:hello@example.com"><span><i class="fa fa-envelope"></i></span>{{portfolio?.email}}</a></li>
         </ul>
     </div>
     <!---banner-area-->
@@ -19,11 +19,11 @@
         </div>
         <!--title-->
         <div class="banner-title">
-            <h2>I'm Riono.</h2>
+            <h2>I'm {{portfolio?.name}}.</h2>
         </div>
         <!--description-->
         <div class="banner-description">
-            <p>I am Riono Doe, web developer from USA, California. I have rich experience in web site design and building and customization, also I am good at WordPress.</p>
+            <p>{{portfolio?.introBio}}</p>
         </div>
         <!---banner-btn-->
         <ul class="banner-btn">

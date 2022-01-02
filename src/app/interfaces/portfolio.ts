@@ -25,11 +25,13 @@ export interface Portfolio {
 }
 
 export interface Service {
+  _id?: string;
   serviceType: string | ServiceType;
   description: string;
 }
 
 export interface Experience {
+  _id?: string;
   experienceType: string | ExperienceType;
   description: string;
   startYear: string;
@@ -37,14 +39,17 @@ export interface Experience {
 }
 
 export interface Education {
-  experienceType: string | EducationType;
+  _id?: string;
+  educationType: string | EducationType;
   description: string;
   startYear: string;
   endYear: string;
 }
 
 export interface Work {
+  _id?: string;
   serviceType: string | ServiceType;
   name: string;
   url: string;
+  description: string;
 }

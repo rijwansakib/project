@@ -37,9 +37,7 @@
           </div>
           <!---bio-description-->
           <div class="bio-description">
-            <p>I am Shamim Hossain, web designer from Bangladesh, Feni. I have rich experience in web
-              site design and building and customization, also I am good at WordPress.
-              love to talk with you about our unique.<img src="/assets/images/junk/smile.png" alt=""></p>
+            <p>{{portfolio?.bio}}<img src="/assets/images/junk/smile.png" alt=""></p>
 
           </div>
         </div> <!--bio-end-->
@@ -55,7 +53,7 @@
                 <span>Age</span>
               </div>
               <div class="other-details-right">
-                <span>28</span>
+                <span>{{portfolio?.age}}</span>
               </div>
             </div>
             <!--Residence-->
@@ -65,7 +63,7 @@
                 <span>Residence</span>
               </div>
               <div class="other-details-right">
-                <span>USA</span>
+                <span>{{portfolio?.residence}}</span>
               </div>
             </div>
 
@@ -80,7 +78,7 @@
                 <span>Email</span>
               </div>
               <div class="other-details-right">
-                <span>hello@example.com</span>
+                <span>{{portfolio?.email}}</span>
               </div>
             </div>
             <!--Phone-->
@@ -90,7 +88,7 @@
                 <span>Phone</span>
               </div>
               <div class="other-details-right">
-                <span>+1-202-555-0135</span>
+                <span>{{portfolio?.email}}</span>
               </div>
             </div>
 
@@ -99,7 +97,7 @@
 
         <!---cv-download-btn-->
         <div class="cv-download-btn">
-          <a href="#">Download CV <i class="fa fa-download"></i></a>
+          <a [href]="portfolio?.cvLink" target="_blank">Download CV <i class="fa fa-download"></i></a>
         </div>
 
 
@@ -108,57 +106,6 @@
 
   </section><!---about-section1-end-->
 
-
-  <!---about-section-2-->
-  <section class="about-section-2">
-    <!--quesion-->
-    <div class="question">
-      <!--icon-->
-      <div class="question-icon">
-        <i class="fa fa-medal"></i>
-      </div>
-      <!--quesion-text-->
-      <div class="question-text">
-        <span>Achievements</span>
-      </div>
-    </div><!--quesion-end-->
-    <!---section-header--->
-    <div class="section-header">
-      <h2>Fun Facts</h2>
-    </div><!---section-header--->
-
-    <!---about-section2-main-area-->
-    <div class="about-section2-main">
-      <app-fun-facts-card [funFactCardData]="funFactCardData"
-                          *ngFor="let funFactCardData of funFactCardArray"></app-fun-facts-card>
-    </div> <!---about-section2-main-area-end-->
-  </section>  <!---about-section2-main-area -->
-
-
-  <!---about-section-3-->
-  <section class="about-section-3">
-    <!--quesion-->
-    <div class="question">
-      <!--icon-->
-      <div class="question-icon">
-        <i class="fa fa-medal"></i>
-      </div>
-      <!--quesion-text-->
-      <div class="question-text">
-        <span>What can I do?</span>
-      </div>
-    </div><!--quesion-end-->
-    <!---section-header--->
-    <div class="section-header">
-      <h2>My Skills</h2>
-    </div><!---section-header--->
-
-    <!--about-section-3-main-->
-    <div class="about-section3-main">
-      <app-skill-details [skillData]="skillData" *ngFor="let skillData of skillDataArray"></app-skill-details>
-    </div>
-
-  </section><!---about-section-3-end-->
 
 
 </section><!--main-cotainer-end-->

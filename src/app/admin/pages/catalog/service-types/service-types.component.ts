@@ -67,7 +67,7 @@ export class ServiceTypesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.refreshData = this.reloadService.refreshData$
       .subscribe(() => {
-        this.getAllBlogs();
+        this.getAllServiceTypes();
       });
 
     // GET PAGE FROM QUERY PARAM
@@ -78,7 +78,7 @@ export class ServiceTypesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.currentPage = 1;
       }
       if (!this.searchProducts.length) {
-        this.getAllBlogs();
+        this.getAllServiceTypes();
       }
     });
   }
@@ -200,7 +200,7 @@ export class ServiceTypesComponent implements OnInit, AfterViewInit, OnDestroy {
   sortData(query: any, type: number) {
     this.sortQuery = query;
     this.activeSort = type;
-    this.getAllBlogs();
+    this.getAllServiceTypes();
   }
 
   /**
@@ -220,7 +220,7 @@ export class ServiceTypesComponent implements OnInit, AfterViewInit, OnDestroy {
    * HTTP REQ HANDLE
    */
 
-  private getAllBlogs() {
+  private getAllServiceTypes() {
     this.spinner.show();
     const pagination: Pagination = {
       pageSize: this.productsPerPage.toString(),

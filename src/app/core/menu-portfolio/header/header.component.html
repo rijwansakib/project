@@ -19,7 +19,7 @@
     <!---menu-->
     <div class="menu-area">
       <ul>
-        <li *ngFor="let data of menuDataArray" [id]="data?._id"><a [routerLink]="data?.menuRouterLink"><i
+        <li *ngFor="let data of menuDataArray" [id]="data?._id"><a [routerLink]="data?.menuRouterLink" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i
           [class]="data?.menuIconName"></i>{{data?.menuName}}</a></li>
       </ul>
     </div><!---menu-end-->

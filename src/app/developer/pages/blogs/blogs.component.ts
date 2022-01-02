@@ -35,7 +35,7 @@ export class BlogsComponent implements OnInit, AfterViewInit, OnDestroy {
   // Pagination
   currentPage = 1;
   totalProducts = 0;
-  productsPerPage = 2;
+  productsPerPage = 10;
   totalProductsStore = 0;
 
   // SEARCH AREA

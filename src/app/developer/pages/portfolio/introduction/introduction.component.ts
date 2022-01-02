@@ -96,12 +96,11 @@ export class IntroductionComponent implements OnInit, OnDestroy {
 
   /**
    * HTTP REQ HANDLE
-   * GET ATTRIBUTES BY ID
    */
 
   private addPortfolio(data: Portfolio) {
     this.spinner.show();
-    this.portfolioService.addPortfolio(data)
+    this.portfolioService.addPortfolioBasic(data)
       .subscribe(res => {
         this.uiService.success(res.message);
         this.spinner.hide();

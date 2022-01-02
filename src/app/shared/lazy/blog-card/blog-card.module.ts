@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BlogCardComponent } from './blog-card.component';
 import {DirectivesModule} from "../../directives/directives.module";
 import {PipesModule} from "../../pipes/pipes.module";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -16,7 +17,8 @@ import {PipesModule} from "../../pipes/pipes.module";
     imports: [
         CommonModule,
         DirectivesModule,
-        PipesModule
+        PipesModule,
+        RouterModule
     ]
 })
 export class BlogCardModule { }

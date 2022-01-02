@@ -1,0 +1,117 @@
+<!---************ section-1 ***********---->
+<section class="section-1 blog-container">
+  <div class="container">
+    <div class="blog-img">
+      <img [src]="blog?.image" [alt]="blog?.image">
+      <div class="user-details">
+        <div>
+          <div class="author">
+            <span>Author Name: {{blog?.author}}</span>
+          </div>
+          <div class="creator">
+            <span>Create: {{blog?.createdAt}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---section1-main-->
+    <div class="section1-main">
+      <!--section1-title-->
+      <div class="section1-title">
+        <h2>{{blog.title}}</h2>
+      </div>
+      <!--section1-description-->
+      <div class="section1-description" [innerHTML]="blog?.body | safeHtmlCustom">
+        <!--        <p>{{blog.body}}</p>-->
+      </div>
+      <!--section1-btn-->
+    </div><!--section1-main-end-->
+
+  </div>
+</section> <!---************ section-1-end ***********---->
+
+<div class="body">
+
+</div> <!-- END BODY -->
+
+
+
+<section class="product-review-area">
+  <div class="container">
+
+    <div class="product-review-main-area">
+      <!---**** review-menu ***-->
+
+      <ng-container>
+        <div class="review-area">
+
+          <div class="add-review-area">
+            <app-blog-comment [blogId]="blog?._id" [pageUrl]="router.url"></app-blog-comment>
+            <div class="line"></div>
+          </div>
+
+          <!--** review-title **-->
+          <!--            <div class="reviews-title">-->
+          <!--              <h2>LEWEL Girl's Cotton Color block Hooded T-Shirt</h2>-->
+          <!--            </div>-->
+
+          <!--******************* user-and-Esquare-review-area-start **********-->
+
+          <div class="user-and-Esquare-review-area" *ngFor="let data of allComments">
+            <!--******* user-review-main *******-->
+            <div class="user-review">
+
+              <!--** user-img ***-->
+              <div class="user-img">
+                <img [src]="data.user?.profileImg ? data.user?.profileImg : '/assets/images/avatar/user-cmnt.png'" [alt]="data.user?.fullName">
+              </div>
+
+              <!--*** user-comment **-->
+              <div class="user-comment clearfix">
+                <div style="margin-bottom: 10px;" class="clearfix">
+                  <div class="user-name">
+                    <h3 class="Name">{{data.user?.name}} <span>– {{data.commentDate | date :'fullDate'}}</span></h3>
+                  </div>
+                </div><!--*** user-comment-end**-->
+                <div class="comment">
+                  <p>{{data?.comment}}</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!--ans-area-->
+            <div class="e-square-ans" *ngIf="data.reply">
+              <!--*** user-review ***-->
+              <div class="user-review">
+
+                <!--** user-img ***-->
+                <div class="user-img">
+                  <img src="/assets/brand/logo-circle.png" alt="e-logo.png">
+                </div>
+
+                <!--*** user-comment **-->
+                <div class="user-comment clearfix">
+                  <div style="margin-bottom: 10px;">
+                    <div class="user-name e-square-title">
+                      <h3 class="Name">JABO <span>– {{data?.commentDate | date: 'fullDate'}}</span></h3>
+                    </div>
+                  </div><!--*** user-comment-end**-->
+                  <div class="comment">
+                    <p>{{data.reply}}</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> <!--******************* user-and-Esquare-review-area-end  *********-->
+
+
+        </div><!---END Review-->
+      </ng-container>
+
+
+    </div>
+  </div>
+</section><!----END PRODUCT BOTTOM-->
