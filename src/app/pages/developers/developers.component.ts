@@ -26,7 +26,7 @@ export class DevelopersComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private customerService: UserDataService,
-    private spinner: NgxSpinnerService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -76,5 +76,7 @@ export class DevelopersComponent implements OnInit {
   public onPageChanged(event: any) {
     this.router.navigate([], {queryParams: {page: event}});
   }
+
+
 
 }

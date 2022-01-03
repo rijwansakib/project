@@ -10,10 +10,10 @@ import {FormsModule} from "@angular/forms";
   declarations: [
     ChatComponent
   ],
-    imports: [
-        CommonModule,
-        ChatRoutingModule,
-        FormsModule
-    ]
+  imports: [
+    CommonModule,
+    ChatRoutingModule,
+    FormsModule
+  ]
 })
 export class ChatModule { }

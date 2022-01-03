@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private getPortfolioByUser() {
     this.spinner.show();
     const select = 'name introBio introImage email phoneNo'
-    this.subDataOne = this.portfolioService.getPortfolioByUser(select)
+    this.subDataOne = this.portfolioService.getPortfolioByUserId(this.userId, select)
       .subscribe(res => {
         this.spinner.hide();
         this.portfolio = res.data;

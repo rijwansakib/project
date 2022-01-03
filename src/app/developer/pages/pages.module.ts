@@ -36,6 +36,10 @@ const routes: Routes = [
         path: 'portfolio',
         loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule),
       },
+      {
+        path: 'chat',
+        loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule),
+      },
     ]
   },
 ];

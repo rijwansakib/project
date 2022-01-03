@@ -3,4 +3,5 @@ export interface MenuDetails {
     menuName:string;
     menuRouterLink:string;
     menuIconName:string;
+    query?:any;
 }

@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Admin} from '../interfaces/admin';
+import {Chat} from "../portfolio/chat/chat.component";
+import {Subject} from "rxjs";
 
 const API_URL_ADMIN = environment.apiBaseLink + '/api/admin/';
 
@@ -9,6 +11,27 @@ const API_URL_ADMIN = environment.apiBaseLink + '/api/admin/';
   providedIn: 'root'
 })
 export class DataService {
+
+  public chats: Chat[] = [
+    {
+      message: 'Are you Available?',
+      user: '61aa77d3e3a35a24e55f2be5'
+    },
+    {
+      message: 'Yes. Please tell me',
+      user: '61aa77d3e3a35a24e55f2be6'
+    }
+  ];
+
+  private reloadChat = new Subject<void>();
+
+
+  get reloadChat$() {
+    return this.reloadChat;
+  }
+  needReloadChat$() {
+    this.reloadChat.next();
+  }
 
   constructor(
     private http: HttpClient
@@ -41,6 +64,19 @@ export class DataService {
 
   updateAdminImageField(id: string, query: object) {
     return this.http.post<{ message: string }>(API_URL_ADMIN + 'update-admin-images', {id, query});
+  }
+
+  /**
+   * CHAT
+   */
+
+  getChats() {
+    return [...this.chats]
+  }
+
+  addChat(chat: Chat) {
+    this.chats.push(chat);
+    this.needReloadChat$();
   }
 
 

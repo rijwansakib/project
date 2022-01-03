@@ -17,6 +17,8 @@
     background: #dff4e4;
     background-repeat: no-repeat;
     background: -webkit-linear-gradient(45deg,#dff4e4 0%, #f0ddee 24%, #dee7f5 49%, #e9dae4 73%, #cbffff 100%);
+  overflow-y: auto;
+
 }
 
 
@@ -90,7 +92,7 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    margin-bottom: 7vh;
+    margin-bottom: 2vh;
 }
 .section-header h2{
     color: $heading-color;

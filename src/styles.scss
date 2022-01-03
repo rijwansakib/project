@@ -3,6 +3,10 @@
 @import "src/theme/fonts";
 @import "src/theme/mixins";
 
+// Portfolio Core
+@import "src/theme/portfolio/protfolio-core";
+@import 'src/theme/portfolio/pages';
+
 
 // Font Awesome
 @import "~@fortawesome/fontawesome-free/css/all.css";

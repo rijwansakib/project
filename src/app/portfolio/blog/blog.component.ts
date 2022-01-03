@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
   blogDataArray:BlogCardInfo[]=[
     {
       _id:'1',
-      blogImg:'./assets/image/blog-1.png',
+      blogImg:'/assets/images/blog/blog-1.png',
       blogCategoriBadge:'Interview',
       blogRouterLink:'#',
       blogTitle:'Best Podcast App Tips You Will Read This Year',
@@ -23,7 +23,7 @@ export class BlogComponent implements OnInit {
     },
     {
       _id:'2',
-      blogImg:'./assets/image/blog-2.png',
+      blogImg:'/assets/images/blog/blog-2.png',
       blogCategoriBadge:'Podcast',
       blogRouterLink:'#',
       blogTitle:'7 Secret Techniques To Improve Gradients',
@@ -32,7 +32,7 @@ export class BlogComponent implements OnInit {
     },
     {
       _id:'3',
-      blogImg:'./assets/image/blog-3.png',
+      blogImg:'/assets/images/blog/blog-3.png',
       blogCategoriBadge:'Meetups',
       blogRouterLink:'#',
       blogTitle:'Fall In Love With Dashboard Design',
@@ -41,7 +41,7 @@ export class BlogComponent implements OnInit {
     },
     {
       _id:'4',
-      blogImg:'./assets/image/blog-4.png',
+      blogImg:'/assets/images/blog/blog-4.png',
       blogCategoriBadge:'Updates',
       blogRouterLink:'#',
       blogTitle:'The Hidden Mystery Behind Pixel 4',
@@ -50,7 +50,7 @@ export class BlogComponent implements OnInit {
     },
     {
       _id:'5',
-      blogImg:'./assets/image/blog-5.png',
+      blogImg:'/assets/images/blog/blog-5.png',
       blogCategoriBadge:'Inspiration',
       blogRouterLink:'#',
       blogTitle:'80 Things To Do Immediately About Icons',
@@ -59,7 +59,7 @@ export class BlogComponent implements OnInit {
     },
     {
       _id:'6',
-      blogImg:'./assets/image/blog-6.png',
+      blogImg:'/assets/images/blog/blog-6.png',
       blogCategoriBadge:'Interview',
       blogRouterLink:'#',
       blogTitle:'The 7 Best Things About Mobile App',

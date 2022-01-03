@@ -7,16 +7,16 @@
             <!---chat-title-->
             <div class="chat-title">
                  <!--quesion-->
-                <div class="question">
-                    <!--icon-->
-                    <div class="question-icon">
-                        <i class="fa fa-pencil-alt"></i>
-                    </div>
-                    <!--quesion-text-->
-                    <div class="question-text">
-                        <span>Message Me?</span>
-                    </div>
-                </div><!--quesion-end-->
+<!--                <div class="question">-->
+<!--                    &lt;!&ndash;icon&ndash;&gt;-->
+<!--                    <div class="question-icon">-->
+<!--                        <i class="fa fa-pencil-alt"></i>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;quesion-text&ndash;&gt;-->
+<!--                    <div class="question-text">-->
+<!--                        <span>Message Me?</span>-->
+<!--                    </div>-->
+<!--                </div>&lt;!&ndash;quesion-end&ndash;&gt;-->
                  <!---section-header--->
                 <div class="section-header">
                     <h2>Message</h2>
@@ -36,37 +36,17 @@
                     <!--show-msg-->
                     <div class="show-msg">
                         <!--ans-->
-                        <div class="msg-ans">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolorum asperiores reiciendis. Facere, repellendus laboriosam?</p>
-                        </div>
+<!--                        <div class="msg-ans">-->
+<!--                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolorum asperiores reiciendis. Facere, repellendus laboriosam?</p>-->
+<!--                        </div>-->
                         <!---quesition-->
-                        <div class="msg-quesition">
-                            <p>whats your name?</p>
+                      <ng-container *ngFor="let c of chats">
+                        <div [ngClass]="c.user == userId ? 'msg-quesition' : 'msg-ans'">
+                          <p >{{c.message}}</p>
                         </div>
-                        <!--ans-->
-                        <div class="msg-ans">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolorum asperiores reiciendis. Facere, repellendus laboriosam?</p>
-                        </div>
-                           <!---quesition-->
-                           <div class="msg-quesition">
-                            <p>whats your name?</p>
-                        </div>
-                        <!--ans-->
-                        <div class="msg-ans">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolorum asperiores reiciendis. Facere, repellendus laboriosam?</p>
-                        </div>
-                           <!---quesition-->
-                           <div class="msg-quesition">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores placeat libero tempore iste, dignissimos odit aliquid error praesentium quos architecto!</p>
-                        </div>
-                          <!---quesition-->
-                          <div class="msg-quesition">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores placeat libero tempore iste, dignissimos odit aliquid error praesentium quos architecto!</p>
-                        </div>
-                          <!--ans-->
-                          <div class="msg-ans">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolorum asperiores reiciendis. Facere, repellendus laboriosam?</p>
-                        </div>
+                      </ng-container>
+
+
                     </div>
                     <!--msg-input-->
                     <div style="background-color: #fff; padding-top: 10px;">
@@ -75,11 +55,11 @@
                             <button type="file"><i class="fa fa-paperclip"></i></button>
                         </div>
                         <div class="text-input-box">
-                            <input type="text" value="" name="" placeholder="Write Message...">
+                            <input type="text" [(ngModel)]="message" name="message" placeholder="Write Message...">
                         </div>
 
                         <div class="msg-submit">
-                            <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                            <button type="button" (click)="onSent()"><i class="fab fa-telegram-plane"></i></button>
                         </div>
 
                     </div>
@@ -95,7 +75,7 @@
                         <img src="/assets/images/junk/about.png" alt="">
                     </div>
                     <div class="user-title">
-                        <a href="#">Shamim hossain</a>
+                        <a href="#">Md Iqbal</a>
                         <span>Online</span>
                     </div>
                 </div>

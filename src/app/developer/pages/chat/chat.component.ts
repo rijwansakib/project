@@ -1,22 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {DataService} from "../../services/data.service";
-
-export interface Chat {
-  message: string;
-  user: string;
-}
+import {Chat} from "../../../portfolio/chat/chat.component";
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-
-
 export class ChatComponent implements OnInit {
 
-  userId: string;
+  userId: string = 'developer';
 
   public chats: Chat[] = [];
 
@@ -28,17 +22,12 @@ export class ChatComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.dataService.reloadChat$.subscribe(() => {
       this.chats = this.dataService.getChats();
+      console.log('Here')
     })
 
-    this.activatedRoute.queryParams.subscribe(param => {
-      if (param && param.user) {
-        this.userId = param.user;
-        this.chats = this.dataService.getChats();
-      }
-    });
+    this.chats = this.dataService.getChats();
 
     console.log(this.chats)
   }

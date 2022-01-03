@@ -1,32 +1,32 @@
 <!---main-container-->
 <section class="main-container">
-    <!--work-section-1-->
-    <section class="work-section-1">
-          <!--quesion-->
-          <div class="question">
-            <!--icon-->
-            <div class="question-icon">
-                <i class="fa fa-gift"></i>
-            </div>
-            <!--quesion-text-->
-            <div class="question-text">
-                <span>Recent Works</span>
-            </div>
-        </div><!--quesion-end-->
-        <!---section-header--->
-        <div class="section-header">
-            <h2>Portfolio</h2>
-        </div><!---section-header--->
+  <!--work-section-1-->
+  <section class="work-section-1">
+    <!--quesion-->
+    <div class="question">
+      <!--icon-->
+      <div class="question-icon">
+        <i class="fa fa-gift"></i>
+      </div>
+      <!--quesion-text-->
+      <div class="question-text">
+        <span>Recent Works</span>
+      </div>
+    </div><!--quesion-end-->
+    <!---section-header--->
+    <div class="section-header">
+      <h2>Projects</h2>
+    </div><!---section-header--->
 
-        <!---work-main-area-->
-        <div class="works-main-area">
-            <app-work-card [workData]="workData" *ngFor="let workData of []"></app-work-card>
-        </div>
-        <!---more-works-btn-->
-        <div class="more-works">
-            <a href="#">More Works</a>
-        </div>
+    <!---work-main-area-->
+    <div class="works-main-area">
+      <app-work-card [workData]="workData" *ngFor="let workData of workDataArray"></app-work-card>
+    </div>
+    <!---more-works-btn-->
+    <div class="more-works">
+      <a href="#">More Works</a>
+    </div>
 
-    </section><!--work-section-1-end-->
+  </section><!--work-section-1-end-->
 
 </section>

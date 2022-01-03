@@ -120,6 +120,7 @@ export class SignUpComponent implements OnInit {
   private getAllCategory() {
     this.categoryService.getAllCategories()
       .subscribe(res => {
+        console.log(res)
         this.categories = res.data;
       }, error => {
         console.log(error);
